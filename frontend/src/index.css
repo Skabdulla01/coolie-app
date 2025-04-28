@@ -1,0 +1,443 @@
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/* Navbar.jsx */
+
+.nav-sign{
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25vw;
+}
+
+nav{
+  background-color: #FFCAB2;
+  height:70px;
+  width: 100vw;
+  position: relative;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo{
+  height: 150px;
+  width: 150px;
+}
+.logo-img{
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.nav-info{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+.nav-logo{
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.nav-ul-info{
+  height: 50px;
+  width: 20vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* coolie.jsx */
+.hero-btn{
+  height: 65px;
+  width: 155px;
+  color: white;
+  background-color: #FF3131;
+  border-radius: 53px;
+  border: 2px solid #FF3131;
+  position: relative;
+  left: 90px;
+  top: 100px;
+  margin-right: 43px;
+  cursor: pointer;
+  
+}
+.porter-btn{
+  margin-top: 10px;
+  width: 353px;
+}
+.hero{
+  height: 500px;
+  width: 100vw;
+}
+.bghero{
+  background-image: url('./image/HeroBG.jpg');
+  background-size: cover;
+  filter: blur(2px);
+  position: absolute;
+  z-index: -1;
+}
+.hero-info{
+  height: 200px;
+  width: 615px;
+  position: relative;
+  left: 90px;
+  top: 70px;
+}
+.font1{
+  font-size: 60px;
+  font-weight: 700;
+  text-shadow:
+  -1px -1px 0 white,  
+   1px -1px 0 white,
+  -1px  1px 0 white,
+   1px  1px 0 white;
+}
+.font3{
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow:
+  -1px -1px 0 white,  
+   1px -1px 0 white,
+  -1px  1px 0 white,
+   1px  1px 0 white;
+}
+
+
+/* login.jsx */
+
+.log{
+  background-color: #FF3131;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logDetail{
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+}
+
+.login-logo{
+  height: 100px;
+  width: 100px;
+}
+
+.inp-log{
+  height: 50px;
+  width: 400px;
+  background-color: #D9D9D9;
+  border: 2px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+.view-pass{
+  display: flex;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+
+.inp-pass{
+  width: 350px;
+}
+
+.view{
+  background-color: #D9D9D9;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.log-btn{
+  height: 50px;
+  width: 400px;
+  color: white;
+  background-color: #FF3131;
+  border-radius: 15px;
+  border: 2px solid #FF3131;
+  cursor: pointer;
+}
+
+.userlink{
+  color: #FF3131;
+}
+
+
+
+/* signup.jsx */
+
+.logsdetail{
+  height: 550px;
+}
+
+.inps{
+  width: 195px;
+}
+
+.signup-data{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.errormsg{
+  color: red;
+}
+
+
+/* dashboard.jsx */
+
+.dash{
+  padding: 15px;
+  background-color: #FF3131;
+  height: 90vh;
+  width: 100vw;
+}
+.bookingstep{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-btn{
+  background-color: #000000;
+  border-radius: 54px;
+  border: 2px solid #000000;
+}
+
+
+
+/* book.jsx */
+
+.prog-bar{
+  height: 5rem;
+  width: 100vw;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+
+}
+
+.num{
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.bar{
+  top: 55px;
+  height:7rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.progress{
+  display: flex;
+  align-items: center;
+  background-color: red;
+  height: 8px;
+  width: 100%;
+  justify-content: space-between;
+}
+.progress-bar{
+  background-color: black;
+  height: 8px;
+  position: absolute;
+  transition: background-color, ease , 2s;
+}
+
+.step{
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 4rem solid black;
+  transition: ease-in , 2s;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/* booking.jsx */
+body{
+  background-color: #FF3131;
+}
+.font-booking{
+  font-size: 45px;
+}
+.p-booking{
+  font-size: 30px;
+}
+.log-booking{
+  height: 79vh;
+}
+.book-detail{
+  height: 500px;
+  width: 70%;
+}
+.bookimg{
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+}
+
+.loc_detail{
+  height: 330px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.loc_option{
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+
+/* luggage.jsx */
+
+.inp-lag{
+  background-image: url("./image/luggage.jpg");
+  background-size: contain;
+  height: 300px;
+  width: 400px;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  border-radius: 15px;
+}
+.range-lag{
+  width: 400px;
+}
+
+
+
+/* payment.jsx */
+.tabel-pay{
+  width: 400px;
+  height: 300px;
+}
+
+
+/* confirm.jsx */
+/* loader */
+.load{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  border: 10px solid gray; 
+  border-top: 10px solid black; 
+  border-radius: 50%; 
+  width: 200px;
+  height: 200px;
+  animation: spin 1.5s linear infinite; 
+}
+
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg); 
+  }
+  100% {
+      transform: rotate(360deg); 
+  }
+}
+
+
+
+/* porter.jsx */
+
+.req-porter{
+  height: 300px;
+  width: 300px;
+  background-color: #FFE4DC;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.tab-proter{
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+
+}
+.por-btn{
+  height: 50px;
+  width: 150px;
+  color: white;
+  background-color: #FF3131;
+  border-radius: 53px;
+  border: 2px solid #FF3131;
+  cursor: pointer;
+}
+
+.log-porter{
+  height: 200rem;
+  background-color: #FF3131;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* working */
+
+/* porterconfirm.jsx */
+.log-port{
+  position: absolute;
+  top: 10vh;
+}
+
+.logp{
+  height: 300px;
+  width: 300px;
+}
+
+
+/* confirm */
+/* try again */
