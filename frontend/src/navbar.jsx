@@ -19,7 +19,8 @@ const no=()=>{
     <ul className='nav-sign'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/help'>Help</Link></li>
-      <li className='nav-info'><Link to="/plogin">Login as Porter</Link></li>
+      {/* <li className='nav-info'><Link to="/plogin">Login as Porter</Link></li> */}
+      <li className="nav-info"> <button className='hero-btn porter-btn' onClick={()=>navigate(`/plogin`)}>Login as Porter</button></li>
       <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li>
     </ul>
   )
