@@ -78,9 +78,15 @@ a{
   cursor: pointer;
   
 }
-.porter-btn{
-  margin-top: 10px;
-  width: 353px;
+
+.por-btn{
+  height: 65px;
+  width: 155px;
+  color: white;
+  background-color: #FF3131;
+  border-radius: 53px;
+  border: 2px solid #FF3131;
+  cursor: pointer;
 }
 .hero{
   height: 500px;

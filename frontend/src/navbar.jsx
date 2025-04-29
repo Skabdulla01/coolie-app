@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './image/CONNECT_LOGO.png'
 import unnamed from './image/unnamed.png'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 
 const yes = ()=>{
   return(
@@ -15,12 +15,13 @@ const yes = ()=>{
 
 
 const no=()=>{
+    const navigate = useNavigate();
   return(
     <ul className='nav-sign'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/help'>Help</Link></li>
       {/* <li className='nav-info'><Link to="/plogin">Login as Porter</Link></li> */}
-      <li className="nav-info"> <button className='hero-btn porter-btn' onClick={()=>navigate(`/plogin`)}>Login as Porter</button></li>
+      <button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Porter</button>
       <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li>
     </ul>
   )
