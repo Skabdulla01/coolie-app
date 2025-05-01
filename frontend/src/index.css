@@ -302,6 +302,9 @@ a{
 /* booking.jsx */
 body{
   background-color: #FF3131;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 .font-booking{
   font-size: 45px;
@@ -445,5 +448,38 @@ body{
 }
 
 
-/* confirm */
-/* try again */
+/* about.jsx */
+
+.bg-about{
+  background-image: url("./image/bg-image.jpg");
+  background-size: cover;
+  filter: blur(1px);
+  height: 60vh;
+  width: 100vw;
+}
+.bg-info{
+  align-content: center;
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  top: 12vh;
+  text-align: center;
+}
+.para-about{
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.desc-about{
+  background-color: aqua;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.desc{
+  background-color: aquamarine;
+  height: 50vh;
+  width: 50vw;
+}
