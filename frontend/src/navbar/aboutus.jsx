@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../navbar'
 
 function aboutus() {
   return (
     <>
-    <h1>about</h1>
+    <Navbar />
     </>
   )
 }
