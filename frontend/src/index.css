@@ -61,7 +61,9 @@ a{
   justify-content: space-between;
   align-items: center;
 }
-
+.nav-info:hover{
+  text-decoration: underline;
+}
 
 /* coolie.jsx */
 .hero-btn{
@@ -450,6 +452,12 @@ body{
 
 /* about.jsx */
 
+.aboutus{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bg-about{
   background-image: url("./image/bg-image.jpg");
   background-size: cover;
@@ -470,16 +478,64 @@ body{
   font-size: 2rem;
 }
 
-.desc-about{
-  background-color: aqua;
-  height: 50vh;
+
+.mission{
+  height: 58vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.mission-data{
+  height: 47vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.mission-set{
+  height: 47vh;
+  width: 48vw;
+  align-content: center;
+}
+
+
+
+
+
+.desc-about{
+  height: 58vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .desc{
-  background-color: aquamarine;
+  background-color: white;
   height: 50vh;
-  width: 50vw;
+  width: 48vw;
+  padding: 20px;
+}
+.para-desc{
+  font-size:2rem;
+}
+
+.Why-it-matters{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 25vh;
+  width: 96vw;
+}
+
+
+/* design */
+
+
+button:hover{
+  border: 2px solid black;
 }
