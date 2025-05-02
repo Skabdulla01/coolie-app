@@ -10,7 +10,7 @@ import Plogin from './plogin';
 import Psignup from './psignup';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Aboutus from './navbar/aboutus';
-import Help from './navbar/help';
+import Contact from './navbar/Contact';
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
         <Route path='/porterconfirm/:id/:uid/:pid' element={<Porterconfirm/>}/>
         {/* nav */}
         <Route path='/aboutus' element={<Aboutus/>}/>
-        <Route path='/help' element={<Help/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
 
         
         

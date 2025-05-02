@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import {useNavigate} from 'react-router-dom'
+import Footer from './footer';
 
 function coolie() {
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ function coolie() {
       <br />
       {/* <button className='hero-btn porter-btn' onClick={()=>navigate(`/plogin`)}>Login as Porter</button> */}
     </div>
+    <Footer />
     </>
   )
 }
