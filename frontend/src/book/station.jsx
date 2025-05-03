@@ -23,18 +23,18 @@ function station({ sendDataToParent, id, uid }) {
     <>
     <div className="log-booking log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
-      <input hidden type="text" placeholder='station detail' value={'station'} readOnly {...register('loc')}/>
+      <input hidden type="text" value={'station'} readOnly {...register('loc')}/>
 
-      <input className='inp-log' type="text" placeholder='Enter Station Name'{...register('station',{required: {value:true, message:"Please enter station"}})}/>
+      <input className='inp-log' type="text" placeholder='  Enter Station Name'{...register('station',{required: {value:true, message:"Please enter station"}})}/>
       {errors.station && <p className='errormsg'>{errors.station.message}</p>}
       
-      <input className='inp-log' type="text" placeholder='Enter Train Number' {...register('trainno',{required: {value:true, message:"Please enter train number"}})}/> 
+      <input className='inp-log' type="text" placeholder='  Enter Train Number' {...register('trainno',{required: {value:true, message:"Please enter train number"}})}/> 
       {errors.trainno && <p className='errormsg'>{errors.trainno.message}</p>}
       
-      <input className='inp-log' type="text" placeholder='Enter Coach Number' {...register('coach',{required: {value:true, message:"Please enter coach number"}})}/>
+      <input className='inp-log' type="text" placeholder='  Enter Coach Number' {...register('coach',{required: {value:true, message:"Please enter coach number"}})}/>
       {errors.coach && <p className='errormsg'>{errors.coach.message}</p>}
       
-      <input className='inp-log' type="text" placeholder='Enter Seat Number' {...register('seat',{required: {value:true, message:"Please enter seat number"}})}/>
+      <input className='inp-log' type="text" placeholder='  Enter Seat Number' {...register('seat',{required: {value:true, message:"Please enter seat number"}})}/>
       {errors.coach && <p className='errormsg'>{errors.coach.message}</p>}
       
       <input hidden type="number" value={0} readOnly {...register('lag')}/> 

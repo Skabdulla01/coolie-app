@@ -131,7 +131,7 @@ a{
 /* login.jsx */
 
 .log{
-  background-color: #FF3131;
+  background-color: #ff9999;
   height: 90vh;
   width: 100vw;
   display: flex;
@@ -227,7 +227,7 @@ a{
 
 .dash{
   padding: 15px;
-  background-color: #FF3131;
+  background-color: #ff9999;
   height: 90vh;
   width: 100vw;
 }
@@ -303,7 +303,7 @@ a{
 
 /* booking.jsx */
 body{
-  background-color: #FF3131;
+  background-color: #ff9999;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -426,7 +426,7 @@ body{
 
 .log-porter{
   height: 200rem;
-  background-color: #FF3131;
+  background-color: #ff9999;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -582,7 +582,7 @@ body{
 
 
 button:hover{
-  border: 2px solid black;
+  border: 2px solid #cc0000;
 }
 
 

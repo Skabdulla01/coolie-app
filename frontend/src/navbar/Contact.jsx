@@ -4,7 +4,7 @@ import Navbar from '../navbar'
 function contact() {
   return (
     <>
-    <Navbar />
+    <Navbar dash="/"/>
     <div className="log">
       <div className="contactus">
         <div className="contact-src">

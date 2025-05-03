@@ -5,7 +5,7 @@ import ourmission from '../image/ourmission.jpg'
 function aboutus() {
   return (
     <>
-    <Navbar />
+    <Navbar dash="/"/>
     <div className="aboutus">
       <div className="about-intro">
         <div className="bg-about"></div>
