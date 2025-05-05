@@ -25,12 +25,11 @@ function luggage({ sendDataToParent, id }) {
   return (
     <>
     <div className="log-booking log">
-      {/* <p className="lag-msg">Each luggage should not be weight more than 10kg and if there if more than 5 bag the weight should be 35 kg only</p> */}
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}> 
         <h1>Total Number of Luggage</h1>
-        <input className='inp-lag' type="text" readOnly value={watchedLag || 6} />
+        <input className='inp-lag' type="text" readOnly value={watchedLag || 3} />
         
-        <input className='range-lag' type="range" min={1} max={10} {...register('lag')}/>
+        <input className='range-lag' type="range" min={1} max={5} {...register('lag')}/>
 
         <input hidden type="text" value={id} {...register('id')}/>
         <button className='log-btn'>Next</button>

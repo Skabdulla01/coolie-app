@@ -177,7 +177,7 @@ function Confirm() {
   // "Try Again" button component
   const again = () => (
     <div className='logDetail'>
-      <h3 className='font3'>Coolie are busy, <br />Please try in a few seconds...</h3>
+      <h3 className='font-align font3'>Coolie are busy, <br />Please try in a few seconds...</h3>
       <button className='por-btn' onClick={() => { navigate(`/dashboard/${id}`); }}>Re-book</button>
     </div>
   );

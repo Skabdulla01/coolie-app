@@ -1,0 +1,90 @@
+
+/* responsive */
+@media (max-width:991px){
+    /* Navbar.jsx */
+  
+    .nav-ul-info{
+      height: 50px;
+      width: 30% !important;
+      padding: 0%;
+    }
+    nav{
+      height:70px;
+      width: 100% !important;
+    } 
+    .nav-sign{
+      height: 50px;
+      padding: 0%;
+      width: 50% !important;
+    }
+  
+
+    
+    
+    /* working */
+    /* login.jsx */
+  
+  .log{
+    width: 100%;
+  }
+  
+  .logDetail{
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+  }
+  
+  .login-logo{
+    height: 100px;
+    width: 100px;
+  }
+  
+  .inp-log{
+    height: 50px;
+    width: 400px;
+    background-color: #D9D9D9;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px;
+  }
+  
+  .view-pass{
+    display: flex;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+  }
+  
+  .inp-pass{
+    width: 350px;
+  }
+  
+  .view{
+    background-color: #D9D9D9;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .log-btn{
+    height: 50px;
+    width: 400px;
+    color: white;
+    background-color: #FF3131;
+    border-radius: 15px;
+    border: 2px solid #FF3131;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  }

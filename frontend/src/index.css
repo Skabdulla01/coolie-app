@@ -2,6 +2,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Navbar.jsx */
@@ -65,7 +66,56 @@ a{
   text-decoration: underline;
 }
 
+input::placeholder{
+  font-size: 1rem;
+}
+input{
+  font-size: 1rem;
+  padding: 0px 10px 0px 10px;
+}
+
 /* coolie.jsx */
+
+
+.container{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #ff9999;
+  background-color: #D9D9D9;
+  height: 65vh;
+  width: 100%;
+}
+
+
+
+
+.whoWeAre{
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.para-data{
+  font-size: 1.5rem;
+  padding: 1rem;
+  /* line-height: 0.5rem; */
+}
+
+.whoweare-data{
+  height: 50vh;
+  width: 70%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.whoweare-img{
+  height: 50vh;
+  width: 25%;
+}
+
+
 .hero-btn{
   height: 65px;
   width: 155px;
@@ -92,7 +142,7 @@ a{
 }
 .hero{
   height: 500px;
-  width: 100vw;
+  width: 100%;
 }
 .bghero{
   background-image: url('./image/HeroBG.jpg');
@@ -133,7 +183,7 @@ a{
 .log{
   background-color: #ff9999;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,11 +282,12 @@ a{
   width: 100vw;
 }
 .bookingstep{
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  height: 600px;
+  width: 70%;
+}
+
+.booking-data{
+  height: 80vh;
 }
 
 .dash-btn{
@@ -351,6 +402,7 @@ body{
   text-align: center;
   font-size: 100px;
   border-radius: 15px;
+  padding-left: 130px;
 }
 .range-lag{
   width: 400px;
@@ -553,9 +605,10 @@ body{
 }
 
 .contact-img{
+  border-radius: 20px;
   height: 65vh;
   width: 40vw;
-  background-image: url("./image/contact.jfif");
+  background-image: url("./image/contact.png");
   background-size: cover;
 }
 
@@ -581,7 +634,7 @@ body{
 /* design */
 
 
-button:hover{
+.hero-btn:hover,.por-btn:hover,.log-btn:hover,.dash-btn:hover,.por-btn:hover{
   border: 2px solid #cc0000;
 }
 
@@ -593,3 +646,108 @@ footer{
   background-color: #000000CC;
   color: #FFFFFF;
 }
+
+
+
+/* responsive */
+/* @media (max-width:600px){ */
+  /* Navbar.jsx */
+  /* .logo{
+    height: 100px;
+    width: 100px;
+  }
+  .logo-img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+  }
+  .nav-logo{
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav-ul-info{
+    height: 50px;
+    width: 50%;
+    padding: 0%;
+  }
+  nav{
+    height:70px;
+    width: 100vw;
+  } 
+  .nav-sign{
+    height: 50px;
+    padding: 0%;
+    width: 90%;
+  }
+  .nav-info{
+    text-align: center;
+  } */
+
+  /* working */
+  /* login.jsx */
+/* 
+.log{
+  width: 100%;
+}
+
+.logDetail{
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+}
+
+.login-logo{
+  height: 100px;
+  width: 100px;
+}
+
+.inp-log{
+  height: 50px;
+  width: 400px;
+  background-color: #D9D9D9;
+  border: 2px solid #D9D9D9;
+  border-radius: 10px;
+}
+
+.view-pass{
+  display: flex;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+}
+
+.inp-pass{
+  width: 350px;
+}
+
+.view{
+  background-color: #D9D9D9;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.log-btn{
+  height: 50px;
+  width: 400px;
+  color: white;
+  background-color: #FF3131;
+  border-radius: 15px;
+  border: 2px solid #FF3131;
+  cursor: pointer;
+}
+
+
+
+
+} */
