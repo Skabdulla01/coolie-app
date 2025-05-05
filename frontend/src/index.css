@@ -18,6 +18,7 @@
 
 nav{
   background-color: #FFCAB2;
+  border: 2px solid black;
   height:70px;
   width: 100vw;
   position: relative;
@@ -100,15 +101,13 @@ input{
 .para-data{
   font-size: 1.5rem;
   padding: 1rem;
-  /* line-height: 0.5rem; */
+  text-align: justify;
 }
 
 .whoweare-data{
   height: 50vh;
   width: 70%;
   display: flex;
-  justify-content: baseline;
-  align-items: center;
 }
 .whoweare-img{
   height: 50vh;
@@ -191,6 +190,7 @@ input{
 }
 
 .logDetail{
+  border: 2px solid black;
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -303,6 +303,7 @@ input{
 .prog-bar{
   height: 5rem;
   width: 100vw;
+  border: 2px solid black;
   background-color: grey;
   display: flex;
   justify-content: center;
@@ -411,8 +412,11 @@ body{
 
 
 /* payment.jsx */
+.p-data{
+  font-size: 1.25rem;
+}
 .tabel-pay{
-  width: 400px;
+  width: 350px;
   height: 300px;
 }
 
@@ -426,11 +430,11 @@ body{
   align-items: center;
 }
 .loader {
-  border: 10px solid gray; 
-  border-top: 10px solid black; 
+  border: 10px dotted gray; 
+  border-top: 10px dotted red; 
   border-radius: 50%; 
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   animation: spin 1.5s linear infinite; 
 }
 
@@ -510,84 +514,23 @@ body{
   align-items: center;
 }
 
-.bg-about{
-  background-image: url("./image/bg-image.jpg");
-  background-size: cover;
-  filter: blur(1px);
-  height: 60vh;
-  width: 100vw;
-}
-.bg-info{
-  align-content: center;
-  height: 50vh;
-  width: 100vw;
-  position: absolute;
-  top: 12vh;
-  text-align: center;
-}
+
 .para-about{
-  margin-top: 2rem;
-  font-size: 2rem;
-}
-
-
-.mission{
-  height: 58vh;
-  width: 100vw;
+  padding: 1rem;
+  text-align: justify;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-.mission-data{
-  height: 47vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.mission-set{
-  height: 47vh;
-  width: 48vw;
-  align-content: center;
+  font-size: 1.5rem;
 }
 
 
-
-
-
-.desc-about{
-  height: 58vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.desc{
-  background-color: white;
-  height: 50vh;
-  width: 48vw;
-  padding: 20px;
-}
-.para-desc{
-  font-size:2rem;
-}
-
-.Why-it-matters{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  height: 25vh;
-  width: 96vw;
-}
 
 
 /* contactus.jsx */
 
 .contactus{
+  border-radius: 15px;
+  border: 2px solid black;
   background-color: white;
   height: 80vh;
   width: 80vw;
@@ -632,21 +575,81 @@ body{
 
 
 /* design */
-
+.font-align{
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 55px;
+}
 
 .hero-btn:hover,.por-btn:hover,.log-btn:hover,.dash-btn:hover,.por-btn:hover{
   border: 2px solid #cc0000;
+}
+button{
+  font-size: 1.25rem;
 }
 
 
 /* footer.jsx */
 footer{
-  width: 100vw;
-  height: 349px;
+  width: 100%;
+  height: 300px;
   background-color: #000000CC;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social{
+  height: 70px;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.icon{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 2rem;
+  color: #000000;
+}
+.footer-ul{
+  height: 5rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.font-footer{
+  color: #FFFFFF;
+  list-style-type: none;
+}
+
+.footer-data{
+  width: 100%;
+  height: 250px;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.credit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+}
 
 
 /* responsive */

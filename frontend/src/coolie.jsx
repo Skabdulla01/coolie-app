@@ -3,7 +3,7 @@ import Navbar from './navbar'
 import {useNavigate} from 'react-router-dom'
 import coolielogo from './image/CONNECT_LOGO.png'
 import steps from './image/step.jpeg'
-// import Footer from './footer';
+import Footer from './footer';
 
 function coolie() {
     const navigate = useNavigate();
@@ -68,7 +68,7 @@ function coolie() {
           </ol>
         </div>
       </div>
-    {/* <Footer /> */}
+    <Footer />
     </>
   )
 }

@@ -47,42 +47,46 @@ function porter() {
   return (
     <>
     <Navbar dash={lnk}/>
-    <h3 className='font3'>Hello {found?found.pfirstname:""},</h3>
-    <div className='log-porter'>
-      {inp.map((item) => (
-        <>
-        <div className="req-porter">
-          <table className='tab-proter'>
-            <tr>
-              <td><p><strong>Current Location</strong></p></td>
-              <td><p><b> : </b></p></td>
-              <td><p><b>{item.loc}</b></p></td>
-            </tr>
-            <tr>
-              <td><p><strong>Station</strong></p></td>
-              <td><p><b> : </b></p></td>
-              <td><p><b>{item.station}</b></p></td>
-            </tr>
-            <tr>
-              <td><p><strong>Train detail</strong></p></td>
-              <td><p><b> : </b></p></td>
-              <td><p><b>{item.trainno}/{item.coach}/{item.seat}</b></p></td>
-            </tr>
-            <tr>
-              <td><p><strong>Total Luggage</strong></p></td>
-              <td><p><b> : </b></p></td>
-              <td><p><b>{item.lag}</b></p></td>
-            </tr>
-            <tr>
-              <td><p><strong>Total Amount</strong></p></td>
-              <td><p><b> : </b></p></td>
-              <td><p><b>{item.totalAmount}</b></p></td>
-            </tr>
-          </table>
-          <button className='por-btn' onClick={()=>accept(item.id,item.uid)}>Accept</button>
-          </div>
-        </>
-      ))}
+    <div className="dash">
+      <div className="username">
+              <h3 className='font3'>Hello {found?found.pfirstname:""},</h3>
+      </div>
+      <div className='log-porter'>
+        {inp.map((item) => (
+          <>
+          <div className="req-porter">
+            <table className='tab-proter'>
+              <tr>
+                <td><p><strong>Current Location</strong></p></td>
+                <td><p><b> : </b></p></td>
+                <td><p><b>{item.loc}</b></p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Station</strong></p></td>
+                <td><p><b> : </b></p></td>
+                <td><p><b>{item.station}</b></p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Train detail</strong></p></td>
+                <td><p><b> : </b></p></td>
+                <td><p><b>{item.trainno}/{item.coach}/{item.seat}</b></p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Total Luggage</strong></p></td>
+                <td><p><b> : </b></p></td>
+                <td><p><b>{item.lag}</b></p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Total Amount</strong></p></td>
+                <td><p><b> : </b></p></td>
+                <td><p><b>{item.totalAmount}</b></p></td>
+              </tr>
+            </table>
+            <button className='por-btn' onClick={()=>accept(item.id,item.uid)}>Accept</button>
+            </div>
+          </>
+        ))}
+      </div>
     </div>
     </>
   )

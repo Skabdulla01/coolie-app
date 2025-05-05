@@ -81,35 +81,35 @@ function Confirm() {
 
   const Pay = () => (
     <div className="logDetail">
-      <h3 className='font3'>Bill:</h3>
+      <h3 className='font3'>Invoice Summary</h3>
       <table className='tabel-pay'>
         <tr>
-          <td><p><strong>Current Location</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.loc : "not found"}</b></p></td>
+          <td><p className='p-data'><strong>Current Location</strong></p></td>
+          <td><p><b> : </b></p></td>
+          <td><p className='p-data'><b>{found ? found.loc : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Station</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.station : "not found"}</b></p></td>
+          <td><p className='p-data'><strong>Station</strong></p></td>
+          <td><p><b> : </b></p></td>
+          <td><p className='p-data'><b>{found ? found.station : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Train detail</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>
+          <td><p className='p-data'><strong>Train detail</strong></p></td>
+          <td><p><b> : </b></p></td>
+          <td><p className='p-data'><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Total Luggage</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.lag : "not found"}</b></p></td>
+          <td><p className='p-data'><strong>Total Luggage</strong></p></td>
+          <td><p><b> : </b></p></td>
+          <td><p className='p-data'><b>{found ? found.lag : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Total Amount</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>₹{found ? found.totalAmount : "not found"}</b></p></td>
+          <td><p className='p-data'><strong>Total Amount</strong></p></td>
+          <td><p><b> : </b></p></td>
+          <td><p className='p-data'><b>₹{found ? found.totalAmount : "not found"}</b></p></td>
         </tr>
       </table>
-      <p><strong>Pay ₹<b>{found ? found.totalAmount : "not found"}</b> to coolie</strong></p>
+      <p className='p-data'><strong>Pay ₹<b>{found ? found.totalAmount : "not found"}</b> to Connect</strong></p>
       <button className='por-btn' onClick={done}>Done</button>
     </div>
   );
@@ -119,7 +119,7 @@ function Confirm() {
       <h1>Coolie Detail</h1>
       <table className='tabel-pay'>
         <tr>
-          <td><p><strong>Coolie name</strong></p></td>
+          <td><p><strong>Connect name</strong></p></td>
           <td><b> : </b></td>
           <td><p><b>{found ? `${found.pfirstname} ${found.plastname}` : "not found"}</b></p></td>
         </tr>
@@ -160,7 +160,7 @@ function Confirm() {
   const loading = () => (
     <div className="load">
       <div className="loader"></div>
-      <h1>Finding a coolie....</h1>
+      <h1>Finding a Connect....</h1>
     </div>
   );
 
@@ -177,8 +177,8 @@ function Confirm() {
   // "Try Again" button component
   const again = () => (
     <div className='logDetail'>
-      <h3 className='font-align font3'>Coolie are busy, <br />Please try in a few seconds...</h3>
-      <button className='por-btn' onClick={() => { navigate(`/dashboard/${id}`); }}>Re-book</button>
+      <p className='font-align para-data'><h3 className='font3'>Connect are busy, </h3><br />Please try in a few seconds...</p>
+      <button className='por-btn' onClick={() => { navigate(`/dashboard/${id}`); }}>Book Again</button>
     </div>
   );
 
@@ -188,7 +188,7 @@ function Confirm() {
     <>
     <Navbar dash={lnk}/>
     <div className='log'>
-      {loadingState ? loading() : tryagain ? again() : check()}
+      {loadingState ? loading() : tryagain ? check() : again()}
     </div>
     </>
   );

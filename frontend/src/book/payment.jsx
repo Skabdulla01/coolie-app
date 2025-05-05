@@ -6,7 +6,7 @@ function payment() {
   const navigate = useNavigate();
     const {id,uid}=useParams();
     const [inp,setinp] = useState([])
-    const [fee,setfee] = useState(100)
+    const [fee,setfee] = useState(39)
     const [gstRate, setGstRate] = useState(18); // Sample GST rate (18%)
     const [isCod, setIsCod] = useState(false); // Track if COD is selected
 
@@ -21,7 +21,7 @@ function payment() {
   const found = inp.find(item=> item.id===parseInt(id) && item.uid===parseInt(uid))//verify id and uid both
   
   
-  const orderAmount = fee+(found?found.lag:0*4)
+  const orderAmount = fee+(found?found.lag*49:0*4)
   // Calculate GST
   const gstAmount = (orderAmount * gstRate) / 100;
 
@@ -58,42 +58,47 @@ function payment() {
         <h1>Booking Details</h1>
         <table className='tabel-pay'>
           <tr>
-            <td><p><strong>Pickup location: </strong></p></td>
+            <td><p><strong>Pickup location</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>{found ? found.loc : "Not Found"}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Station name: </strong></p></td>
+            <td><p><strong>Station name</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>{found ? found.station : "Not Found"}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Train detail: </strong><br />(Train no/Coach no/Seat no)</p></td>
+            <td><p><strong>Train detail</strong><br />(Train no/Coach no/Seat no)</p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>{found ? found.trainno : "Not Found"}/{found ? found.coach : "Not Found"}/{found ? found.seat : "Not Found"}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Total Luggage: </strong></p></td>
+            <td><p><strong>Total Luggage</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>{found ? found.lag : "Not Found"}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Convinent fee: </strong></p></td>
+            <td><p><strong>Luggage Fee</strong></p></td>
+            <td><p><b>:</b></p></td>
+            <td><p><b>₹{found?found.lag*49:0*4}</b></p></td>
+          </tr>
+          <tr>
+            <td><p><strong>Convinent fee</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>₹{fee}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Order Amount: </strong></p></td>
+            <td><p><strong>Order Amount</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>₹{orderAmount}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>GST ({gstRate}%): </strong></p></td>
+            <td><p><strong>GST ({gstRate}%)</strong></p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>₹{gstAmount.toFixed(2)}</b></p></td>
           </tr>
           <tr>
-            <td><p><strong>Total (Including GST): </strong></p></td>
+            <td><p><strong>Total</strong><br />(Including GST)</p></td>
             <td><p><b>:</b></p></td>
             <td><p><b>₹{totalAmount.toFixed(2)}</b></p></td>
           </tr>

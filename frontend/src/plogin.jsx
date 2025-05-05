@@ -47,16 +47,16 @@ function plogin() {
     <div className="log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
         <img className='login-logo' src={logo} alt="logo" />
-        <h2>Login into Connect Coolie (as Porter)</h2>
-        <input className='inp-log' type="email" placeholder='  Enter the Email' {...register("email",{required:{value:true,message:"Email require"}})}/>
+        <h2>Login into Connect Coolie (as Connect)</h2>
+        <input className='inp-log' type="email" placeholder='Enter the Email' {...register("email",{required:{value:true,message:"Email require"}})}/>
         {errors.email && <p className='errormsg'>{errors.email.message}</p>}
         <div className="view-pass">
-          <input className='inp-log inp-pass' type={txt?"text":"password"} placeholder='  Enter the Password' {...register("password",{required:{value:true,message:"Password require"}})}/>
+          <input className='inp-log inp-pass' type={txt?"text":"password"} placeholder='Enter the Password' {...register("password",{required:{value:true,message:"Password require"}})}/>
           <div className='view' onClick={()=>settxt(!txt)}>{!txt?"Show":"Hide"}</div>
         </div>
         {errors.password && <p className='errormsg'>{errors.password.message}</p>}
         <button className='log-btn'>Log in</button>
-        <Link className='userlink' to="/psignup">Sign up for Porter</Link>
+        <Link className='userlink' to="/psignup">Sign up for Connect</Link>
       </form>
     </div>
     </>
