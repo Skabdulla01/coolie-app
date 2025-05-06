@@ -25,6 +25,9 @@ function station({ sendDataToParent, id, uid }) {
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
       <input hidden type="text" value={'station'} readOnly {...register('loc')}/>
 
+      <input className='inp-log' type="text" placeholder='PNR Number'{...register('pnr',{required: {value:true, message:"Please enter pnr"}})}/>
+      {errors.pnr && <p className='errormsg'>{errors.pnr.message}</p>}
+
       <input className='inp-log' type="text" placeholder='Enter Station Name'{...register('station',{required: {value:true, message:"Please enter station"}})}/>
       {errors.station && <p className='errormsg'>{errors.station.message}</p>}
       

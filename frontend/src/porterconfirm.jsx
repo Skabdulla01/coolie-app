@@ -64,6 +64,14 @@ function porterconfirm() {
           <td className='space p-data'><p><b>:</b></p></td>
           <td className='p-data'><p><b>{found ? found.loc : "Current Location"}</b></p></td>
         </tr>
+
+        <tr>
+          <td className='p-data'><p><strong>PNR number</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.pnr : "Current Location"}</b></p></td>
+        </tr>
+
+
         <tr>
           <td className='p-data'><p><strong>Station</strong></p></td>
           <td className='space p-data'><p><b>:</b></p></td>

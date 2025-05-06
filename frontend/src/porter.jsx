@@ -66,6 +66,13 @@ function porter() {
                 <td className='space p-data'><p><b>:</b></p></td>
                 <td className='p-data'><p><b>{item.station}</b></p></td>
               </tr>
+
+              <tr>
+                <td className='p-data'><p><strong>PNR number</strong></p></td>
+                <td className='space p-data'><p><b>:</b></p></td>
+                <td className='p-data'><p><b>{item.pnr}</b></p></td>
+              </tr>
+
               <tr>
                 <td className='p-data'><p><strong>Train detail</strong></p></td>
                 <td className='space p-data'><p><b>:</b></p></td>

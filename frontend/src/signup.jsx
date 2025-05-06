@@ -38,15 +38,19 @@ function signup() {
             try {
                 const newdata = {...data,id: value};
                 await axios.post("/api/signup",newdata)
+                 navigate(`/login`)
+
             } catch (error) {
                 console.log(error)
             }
         }
 
-        const signup=()=>{
-          alert("sign up is completed successfully")
-          navigate(`/login`)
-        }
+        // const signup=()=>{
+        //     // alert("sign up is completed successfully")
+        //     // navigate(`/login`)
+        //   }
+
+
 
 
   return (
@@ -59,11 +63,11 @@ function signup() {
         <div className="signup-data">
         <div className="inp-data">
         <input className='inps inp-log' type="text" placeholder='Enter Firstname' {...register("firstname",{required:{value:true,message:"Firstname Require"}})}/>
-        {errors.firstname && <p className='errormsg'>{errors.firstname.message}</p>}
+        {/* {errors.firstname && <p className='errormsg'>{errors.firstname.message}</p>} */}
         </div>
         <div className="inp-data">
         <input className='inps inp-log' type="text" placeholder='Enter Lastname' {...register("lastname",{required:{value:true,message:"Lastname Require"}})}/>
-        {errors.lastname && <p className='errormsg'>{errors.lastname.message}</p>}
+        {/* {errors.lastname && <p className='errormsg'>{errors.lastname.message}</p>} */}
         </div>
         </div>
 
@@ -71,16 +75,16 @@ function signup() {
         <div className="signup-data">
         <div className="inp-data">
         <input className='inps inp-log' type="email" placeholder='Enter Email'{...register("email",{required:{value:true,message:"Email Require"}})}/>
-        {errors.email && <p className='errormsg'>{errors.email.message}</p>}
+        {/* {errors.email && <p className='errormsg'>{errors.email.message}</p>} */}
         </div>
         <div className="inp-data">
         <input className='inps inp-log' type="text" placeholder='Enter phone number' {...register("phonenumber",{required:{value:true,message:"Phone Number Require"}})}/>
-        {errors.phonenumber && <p className='errormsg'>{errors.phonenumber.message}</p>}
+        {/* {errors.phonenumber && <p className='errormsg'>{errors.phonenumber.message}</p>} */}
         </div>
         </div>
 
         <input className='inp-log' type="text" placeholder='Enter password' {...register("password",{required:{value:true,message:"Password Require"}})}/>
-        {errors.password && <p className='errormsg'>{errors.password.message}</p>}
+        {/* {errors.password && <p className='errormsg'>{errors.password.message}</p>} */}
         
         <button className='log-btn' onClick={signup}>Sign up</button>
       </form>

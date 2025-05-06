@@ -67,6 +67,14 @@ function payment() {
             <td className='space'><p><b>:</b></p></td>
             <td><p><b>{found ? found.station : "Not Found"}</b></p></td>
           </tr>
+
+          <tr>
+            <td><p><strong>PNR number</strong></p></td>
+            <td className='space'><p><b>:</b></p></td>
+            <td><p><b>{found ? found.pnr : "Not Found"}</b></p></td>
+          </tr>
+
+
           <tr>
             <td><p><strong>Train detail</strong><br />(Train no/Coach no/Seat no)</p></td>
             <td className='space'><p><b>:</b></p></td>

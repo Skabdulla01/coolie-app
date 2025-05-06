@@ -63,9 +63,6 @@ a{
   justify-content: space-between;
   align-items: center;
 }
-.nav-info:hover{
-  text-decoration: underline;
-}
 
 input::placeholder{
   font-size: 1rem;
@@ -112,6 +109,7 @@ input{
 .whoweare-img{
   height: 50vh;
   width: 25%;
+  border-radius: 15px;
 }
 
 
@@ -416,7 +414,7 @@ body{
   font-size: 1.25rem;
 }
 .tabel-pay{
-  width: 350px;
+  width: 410px;
   height: 300px;
 }
 
@@ -653,4 +651,59 @@ footer{
   height: 50px;
   width: 100%;
   background-color: black;
+}
+
+
+
+/* menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* history.jsx */
+.history-tabel{
+  background-color: black;
+  height: 80vh;
+  width: 70%;
+  text-align: center;
+  border: 1px solid black;
+}
+.tabel-data{
+  font-size: 1.2rem;
+  background-color: white;
+  border: 1px solid black;
+  border-collapse: collapse;
 }

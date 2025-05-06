@@ -11,6 +11,10 @@ import Psignup from './psignup';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Aboutus from './navbar/aboutus';
 import Contact from './navbar/Contact';
+import History from './menu/history';
+import Profile from './menu/profile'
+import Forgot from './forgot';
+import Pforgot from './pforgot';
 
 
 function App() {
@@ -33,7 +37,13 @@ function App() {
         {/* nav */}
         <Route path='/aboutus' element={<Aboutus/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        {/* menu */}
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/history/:id' element={<History/>}/>
 
+        <Route path='/forgot' element={<Forgot/>}/>
+        <Route path='/pforgot' element={<Pforgot/>}/>
+        
         
         
       </Routes>

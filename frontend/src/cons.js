@@ -33,7 +33,6 @@ function Confirm() {
     };
   }, [id, uid]);
 
-
   // Fetching data
   useEffect(() => {
     const interval = setInterval(() => {
@@ -134,15 +133,6 @@ function Confirm() {
           <td className='space p-data'><b>:</b></td>
           <td className='p-data'><p><b>{found ? found.loc : "not found"}</b></p></td>
         </tr>
-
-        
-        <tr>
-          <td className='p-data'><p><strong>PNR number</strong></p></td>
-          <td className='space p-data'><b>:</b></td>
-          <td className='p-data'><p><b>{found ? found.pnr : "not found"}</b></p></td>
-        </tr>
-
-
         <tr>
           <td className='p-data'><p><strong>Station</strong></p></td>
           <td className='space p-data'><b>:</b></td>

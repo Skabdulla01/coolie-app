@@ -3,12 +3,19 @@ import logo from './image/CONNECT_LOGO.png'
 import unnamed from './image/unnamed.png'
 import {Link,useNavigate} from 'react-router-dom'
 
-const yes = ()=>{
+const yes = (id)=>{
   return(
     <ul className='nav-ul-info'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
-      <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li>
+      <li className="nav-info dropdown">
+      <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
+      <ul className="dropdown-menu">
+        <li><Link to="/profile">Profile</Link></li>
+        <li><Link to={`/history/${id}`}>History</Link></li>
+        {/* <li><Link to="/">Logout</Link></li> */}
+      </ul>
+    </li>
     </ul>
   )
 }
@@ -20,7 +27,6 @@ const no=()=>{
     <ul className='nav-sign'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
-      {/* <li className='nav-info'><Link to="/plogin">Login as Porter</Link></li> */}
       <button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>
       <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li>
     </ul>
@@ -33,7 +39,7 @@ function navbar(props) {
         <div className="logo">
             <Link to= {props.dash}><img className='logo-img' src={logo} alt="logo" /></Link>
         </div>
-        {Boolean(props.nav)?no():yes()}
+        {Boolean(props.nav)?no():yes(props.userid)}
     </nav>
     </>
   )

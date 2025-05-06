@@ -36,9 +36,9 @@ app.get("/api/login",(req,res)=>{
 
 
 app.post("/api/data",(req,res)=>{
-    const query = "INSERT INTO detail (id, uid, loc, station, trainno, coach, seat, lag) VALUES (?,?,?,?,?,?,?,?)" 
-    const {id, uid, loc, station, trainno, coach, seat, lag} = req.body
-    pool.query(query,[id, uid, loc, station, trainno, coach, seat, lag],(error,result)=>{
+    const query = "INSERT INTO detail (id, uid, loc, pnr, station, trainno, coach, seat, lag) VALUES (?,?,?,?,?,?,?,?,?)" 
+    const {id, uid, loc, pnr, station, trainno, coach, seat, lag} = req.body
+    pool.query(query,[id, uid, loc, pnr,station, trainno, coach, seat, lag],(error,result)=>{
         if (error) {
             return res.status(500).json({ message: 'Error inserting data', error: error });
           }
@@ -70,9 +70,9 @@ app.get("/api/detail",(req,res)=>{
 })
 
 app.post("/api/booking",(req,res)=>{
-    const query = "INSERT INTO booking (id, uid, loc, station, trainno, coach, seat, lag, totalAmount) VALUES (?,?,?,?,?,?,?,?,?)"
-    const {id, uid, loc, station, trainno, coach, seat, lag, totalAmount} = req.body
-    pool.query(query,[id, uid,loc, station, trainno, coach, seat, lag, totalAmount],(error,result)=>{
+    const query = "INSERT INTO booking (id, uid, loc, pnr, station, trainno, coach, seat, lag, totalAmount) VALUES (?,?,?,?,?,?,?,?,?,?)"
+    const {id, uid, loc, pnr, station, trainno, coach, seat, lag, totalAmount} = req.body
+    pool.query(query,[id, uid,loc, pnr, station, trainno, coach, seat, lag, totalAmount],(error,result)=>{
         if (error) {
             return res.status(500).json({ message: 'Error inserting data', error: error });
           }
@@ -130,9 +130,9 @@ app.get("/api/plogin",(req,res)=>{
 
 app.post("/api/alldata",(req,res)=>{
     const done = "Processing"
-    const query = "INSERT INTO confirm (id, uid, loc, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid ,done) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-    const {id, uid, loc, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid}=req.body
-    pool.query(query,[id, uid, loc, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid, done],(error,result)=>{
+    const query = "INSERT INTO confirm (id, uid, loc, pnr, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid ,done) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+    const {id, uid, loc, pnr, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid}=req.body
+    pool.query(query,[id, uid, loc, pnr, station, trainno, coach, seat, lag, totalAmount, firstname, lastname, email, phonenumber, password, pid, done],(error,result)=>{
         if (error) {
             return res.status(500).json({ message: 'Error inserting data', error: error });
           }
@@ -177,6 +177,29 @@ app.put("/api/updatedone",(req,res)=>{
 
 //
 
+// forgot password
+
+app.put("/api/updatepassword",(req,res)=>{
+    const query= "UPDATE signup SET password=? WHERE phonenumber = ?"
+    const {password,phonenumber}= req.body
+    pool.query(query,[password,phonenumber],(error,result)=>{
+        if (error) {
+            return res.status(500).json({ message: 'Error inserting data', error: error });
+          }
+          res.status(200).json({ message: 'Data inserted successfully', data: result });
+    })
+})
+
+app.put("/api/pupdatepassword",(req,res)=>{
+    const query= "UPDATE psignup SET ppassword=? WHERE pnumber = ?"
+    const {ppassword,pnumber}= req.body
+    pool.query(query,[ppassword,pnumber],(error,result)=>{
+        if (error) {
+            return res.status(500).json({ message: 'Error inserting data', error: error });
+          }
+          res.status(200).json({ message: 'Data inserted successfully', data: result });
+    })
+})
 
 
 

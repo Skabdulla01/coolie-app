@@ -15,7 +15,7 @@ function aboutus() {
             <h1 className='font1'>Welcome to Connect Coolie</h1>
             <div className="whoWeAre">
               <div className="whoweare-data">
-                <p className='para-about'>At Connect Coolie, we recognize and honor the vital role of railway coolies – the unsung heroes who help millions of travelers every day by carrying their burdens, quite literally. Our platform is dedicated to making their services more accessible, organized, and respectful in today’s fast-paced world.</p>
+                <p className='para-about'>At Connect Coolie, we deeply recognize and honor the invaluable contributions of railway coolies—those tireless, often overlooked individuals who form the backbone of travel infrastructure across the country. These unsung heroes provide essential support to millions of passengers each day, lifting not just physical luggage but also the stress and challenges of transit, often in difficult conditions and with limited recognition. Through our platform, we aim to bring dignity, structure, and convenience to their work by making their services more accessible, better organized, and seamlessly integrated into the modern travel experience. In a world that moves quickly and often forgets the people who keep it going, Connect Coolie is committed to shining a light on their dedication and ensuring they are treated with the respect they have long deserved.</p>
               </div>
               <img src={connect} alt="logo" className="whoweare-img" />
             </div>

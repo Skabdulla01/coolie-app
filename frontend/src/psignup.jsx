@@ -43,10 +43,10 @@ function psignup() {
             }
         }
 
-        const signup=()=>{
-          alert("sign up is completed successfully")
-          navigate(`/plogin`)
-        }
+        // const signup=()=>{
+        //   alert("sign up is completed successfully")
+        //   navigate(`/plogin`)
+        // }
 
 
 
@@ -88,7 +88,7 @@ function psignup() {
           <input className='inp-log' type="text" placeholder='Enter password' {...register("ppassword",{required:{value:true,message:"password require"}})}/>
           {errors.password && <p className='errormsg'>{errors.password.message}</p>}
         
-        <button className='log-btn' onClick={signup}>Sign up</button>
+        <button className='log-btn'>Sign up</button>
       </form>
     </div>
     </>

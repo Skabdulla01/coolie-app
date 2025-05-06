@@ -36,13 +36,13 @@ function dashboard() {
 
     const found = inp.find(item=> item.id === parseInt(id))
     
-
+    const userid=found?found.id:""
 
 
 
   return (
     <>
-    <Navbar dash="/dashboard/1100" />
+    <Navbar dash={`/dashboard/${userid}`} userid={userid}/>
     <div className="dash">
         <div className="username">
             <h3 className='font3'>Hello {found?found.firstname:""},</h3>

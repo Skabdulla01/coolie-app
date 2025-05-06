@@ -47,14 +47,16 @@ function login() {
         <img className='login-logo' src={logo} alt="logo" />
         <h2>Login into Connect Coolie (as User)</h2>
         <input className='inp-log' type="email" placeholder='Enter the Email' {...register("email",{required:{value:true,message:"Email require"}})}/>
-        {errors.email && <p className='errormsg'>{errors.email.message}</p>}
+        {/* {errors.email && <p className='errormsg'>{errors.email.message}</p>} */}
         <div className="view-pass">
           <input className='inp-log inp-pass' type={txt?"text":"password"} placeholder='Enter the Password' {...register("password",{required:{value:true,message:"Password require"}})}/>
           <div className='view' onClick={()=>settxt(!txt)}>{!txt?"Show":"Hide"}</div>
         </div>
-        {errors.password && <p className='errormsg'>{errors.password.message}</p>}
+        {/* {errors.password && <p className='errormsg'>{errors.password.message}</p>} */}
         <button className="log-btn">Log in</button>
         <Link className='userlink' to="/signup">Sign up for Connect coolie</Link>
+        <p className='userlink'>--or--</p>
+        <Link className='userlink' to="/forgot">Forgotten password</Link>
       </form>
     </div>
     </>
