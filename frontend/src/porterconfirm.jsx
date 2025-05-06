@@ -50,34 +50,34 @@ function porterconfirm() {
       <h1>User Detail</h1>
       <table className="tabel-pay">
         <tr>
-          <td><p><strong>Customer name</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.firstname : "Customer name"}</b></p></td>
+          <td className='p-data'><p><strong>Customer name</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.firstname : "Customer name"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Customer number</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.phonenumber : "Customer number"}</b></p></td>
+          <td className='p-data'><p><strong>Customer number</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.phonenumber : "Customer number"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Current Location</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.loc : "Current Location"}</b></p></td>
+          <td className='p-data'><p><strong>Current Location</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.loc : "Current Location"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Station</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.station : "Station"}</b></p></td>
+          <td className='p-data'><p><strong>Station</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.station : "Station"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Train detail</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.trainno : "not found"}/{found ? found.coach : "not found"}/{found ? found.seat : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Train detail</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.trainno : "not found"}/{found ? found.coach : "not found"}/{found ? found.seat : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Total Luggage</strong></p></td>
-          <td><p><b> : </b></p></td>
-          <td><p><b>{found ? found.lag : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Total Luggage</strong></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
+          <td className='p-data'><p><b>{found ? found.lag : "not found"}</b></p></td>
         </tr>
       </table>
       <button className='log-btn' onClick={complete}>Complete</button>

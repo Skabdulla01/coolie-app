@@ -59,47 +59,47 @@ function payment() {
         <table className='tabel-pay'>
           <tr>
             <td><p><strong>Pickup location</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>{found ? found.loc : "Not Found"}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Station name</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>{found ? found.station : "Not Found"}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Train detail</strong><br />(Train no/Coach no/Seat no)</p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>{found ? found.trainno : "Not Found"}/{found ? found.coach : "Not Found"}/{found ? found.seat : "Not Found"}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Total Luggage</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>{found ? found.lag : "Not Found"}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Luggage Fee</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>₹{found?found.lag*49:0*4}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Convinent fee</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>₹{fee}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Order Amount</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>₹{orderAmount}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>GST ({gstRate}%)</strong></p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>₹{gstAmount.toFixed(2)}</b></p></td>
           </tr>
           <tr>
             <td><p><strong>Total</strong><br />(Including GST)</p></td>
-            <td><p><b>:</b></p></td>
+            <td className='space'><p><b>:</b></p></td>
             <td><p><b>₹{totalAmount.toFixed(2)}</b></p></td>
           </tr>
         </table>

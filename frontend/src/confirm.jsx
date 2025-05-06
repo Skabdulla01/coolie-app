@@ -85,27 +85,27 @@ function Confirm() {
       <table className='tabel-pay'>
         <tr>
           <td><p className='p-data'><strong>Current Location</strong></p></td>
-          <td><p><b> : </b></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>{found ? found.loc : "not found"}</b></p></td>
         </tr>
         <tr>
           <td><p className='p-data'><strong>Station</strong></p></td>
-          <td><p><b> : </b></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>{found ? found.station : "not found"}</b></p></td>
         </tr>
         <tr>
           <td><p className='p-data'><strong>Train detail</strong></p></td>
-          <td><p><b> : </b></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>
         </tr>
         <tr>
           <td><p className='p-data'><strong>Total Luggage</strong></p></td>
-          <td><p><b> : </b></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>{found ? found.lag : "not found"}</b></p></td>
         </tr>
         <tr>
           <td><p className='p-data'><strong>Total Amount</strong></p></td>
-          <td><p><b> : </b></p></td>
+          <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>₹{found ? found.totalAmount : "not found"}</b></p></td>
         </tr>
       </table>
@@ -116,42 +116,42 @@ function Confirm() {
 
   const View = () => (
     <div className="logDetail">
-      <h1>Coolie Detail</h1>
+      <h1>Connect Detail</h1>
       <table className='tabel-pay'>
         <tr>
-          <td><p><strong>Connect name</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? `${found.pfirstname} ${found.plastname}` : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Connect name</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? `${found.pfirstname} ${found.plastname}` : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Phone number</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.pnumber : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Phone number</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? found.pnumber : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Current Location</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.loc : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Current Location</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? found.loc : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Station</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.station : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Station</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? found.station : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Train detail</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Train detail</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Total Luggage</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>{found ? found.lag : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Total Luggage</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>{found ? found.lag : "not found"}</b></p></td>
         </tr>
         <tr>
-          <td><p><strong>Total Amount</strong></p></td>
-          <td><b> : </b></td>
-          <td><p><b>₹{found ? found.totalAmount : "not found"}</b></p></td>
+          <td className='p-data'><p><strong>Total Amount</strong></p></td>
+          <td className='space p-data'><b>:</b></td>
+          <td className='p-data'><p><b>₹{found ? found.totalAmount : "not found"}</b></p></td>
         </tr>
       </table>
     </div>
@@ -188,7 +188,7 @@ function Confirm() {
     <>
     <Navbar dash={lnk}/>
     <div className='log'>
-      {loadingState ? loading() : tryagain ? check() : again()}
+      {loadingState ? loading() : tryagain ? again() : check()}
     </div>
     </>
   );
