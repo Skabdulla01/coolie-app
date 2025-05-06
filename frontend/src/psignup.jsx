@@ -38,15 +38,14 @@ function psignup() {
             try {
                 const newdata = {...data,pid: value};
                 await axios.post("/api/psignup",newdata)
+                alert("sign up is completed successfully")
+                navigate(`/plogin`)
             } catch (error) {
                 console.log(error)
             }
         }
 
-        // const signup=()=>{
-        //   alert("sign up is completed successfully")
-        //   navigate(`/plogin`)
-        // }
+
 
 
 

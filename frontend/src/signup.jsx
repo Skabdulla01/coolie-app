@@ -38,17 +38,14 @@ function signup() {
             try {
                 const newdata = {...data,id: value};
                 await axios.post("/api/signup",newdata)
-                 navigate(`/login`)
+                alert("sign up is completed successfully")
+                navigate(`/login`)
 
             } catch (error) {
                 console.log(error)
             }
         }
-
-        // const signup=()=>{
-        //     // alert("sign up is completed successfully")
-        //     // navigate(`/login`)
-        //   }
+        
 
 
 
@@ -86,7 +83,7 @@ function signup() {
         <input className='inp-log' type="text" placeholder='Enter password' {...register("password",{required:{value:true,message:"Password Require"}})}/>
         {/* {errors.password && <p className='errormsg'>{errors.password.message}</p>} */}
         
-        <button className='log-btn' onClick={signup}>Sign up</button>
+        <button className='log-btn'>Sign up</button>
       </form>
     </div>
     </>

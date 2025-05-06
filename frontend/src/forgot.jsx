@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from './navbar'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 function forgot() {
+  const navigate = useNavigate()
     const {
             register,
             handleSubmit,
@@ -12,6 +14,8 @@ function forgot() {
     const onSubmit = async (data)=>{
         try {
             await axios.put("/api/updatepassword",data)
+            alert("Password is successfully changed")
+            navigate(`/login`)
             
         } catch (error) {
             console.log(error)

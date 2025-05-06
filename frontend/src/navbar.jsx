@@ -11,9 +11,9 @@ const yes = (id)=>{
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
       <ul className="dropdown-menu">
-        <li><Link to="/profile">Profile</Link></li>
+        <li><Link to={`/profile/${id}`}>Profile</Link></li>
         <li><Link to={`/history/${id}`}>History</Link></li>
-        {/* <li><Link to="/">Logout</Link></li> */}
+        <li><Link to="/">Logout</Link></li>
       </ul>
     </li>
     </ul>

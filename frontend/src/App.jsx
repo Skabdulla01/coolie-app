@@ -38,7 +38,7 @@ function App() {
         <Route path='/aboutus' element={<Aboutus/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         {/* menu */}
-        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/profile/:id' element={<Profile/>}/>
         <Route path='/history/:id' element={<History/>}/>
 
         <Route path='/forgot' element={<Forgot/>}/>
