@@ -3,6 +3,7 @@
   margin: 0%;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
+  /* overflow: hidden; */
 }
 
 /* Navbar.jsx */
@@ -57,7 +58,7 @@ a{
 
 .nav-ul-info{
   height: 50px;
-  width: 20vw;
+  width: 25%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -281,7 +282,7 @@ input{
   padding: 15px;
   background-color: #ff9999;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
 }
 .bookingstep{
   height: 600px;
@@ -395,7 +396,9 @@ body{
 
 
 /* luggage.jsx */
-
+.font-lug{
+  font-size: 2rem;
+}
 .inp-lag{
   background-image: url("./image/luggage.jpg");
   background-size: contain;

@@ -50,7 +50,7 @@ function dashboard() {
           <div className="logDetail bookingstep">
               <h3 className='font3'>How to book your Connect?</h3>
               
-              <ol>
+              <ol className='ol-dash'>
                   <li className='para-data'>Click on the “Book My Connect” button.</li>
                   <li className='para-data'>Fill all the details asked.</li>
                   <li className='para-data'>Enter your luggage count.</li>

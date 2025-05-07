@@ -1,11 +1,13 @@
 
 /* responsive */
+
+/* 991px */
 @media (max-width:991px){
     /* Navbar.jsx */
   
     .nav-ul-info{
       height: 50px;
-      width: 30% !important;
+      width: 35% !important;
       padding: 0%;
     }
     nav{
@@ -15,76 +17,425 @@
     .nav-sign{
       height: 50px;
       padding: 0%;
-      width: 50% !important;
+      width: 70% !important;
     }
-  
+
+    /* dashboard.jsx */
+    .para-data{
+      font-size: 1.25rem !important;
+      padding: 1rem  !important;
+      text-align: justify !important;
+    }
+    .bookingstep{
+      height: 500px !important;
+      width: 70% !important;
+    }
+    .ol-dash{
+      height: 275px !important;
+      width: 85% !important;
+    }
+
+    /* booking.jsx */
+
+    .book-detail{
+      height: 500px !important;
+      width: 85% !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .bookimg{
+      height: 200px !important;
+      width: 300px !important;
+    }
+    .loc_detail{
+      height: 330px !important;
+      width: 85% !important;
+      display: flex !important;
+      justify-content: space-evenly !important;
+    }
+
+    /* train.jsx */
 
     
+/* luggage.jsx */
+
     
-    /* working */
-    /* login.jsx */
+
+  }
+
+
+
+
+    /* 768 */
+  @media (max-width:768px){
+    /* Navbar.jsx */
   
-  .log{
-    width: 100%;
+    .nav-ul-info{
+      height: 50px;
+      width: 50% !important;
+      padding: 0%;
+    }
+    nav{
+      height:70px;
+      width: 100% !important;
+    } 
+    .nav-sign{
+      height: 50px;
+      padding: 0%;
+      width: 85% !important;
+    }
+
+    /* dashboard.jsx */
+    .para-data{
+      font-size: 1.20rem !important;
+      padding: 1rem  !important;
+      text-align: justify !important;
+    }
+    .bookingstep{
+      height: 450px !important;
+      width: 90% !important;
+    }
+    .ol-dash{
+      height: 300px !important;
+      width: 70% !important;
+    }
+
+    .font3{
+      font-size: 30px !important;
+      font-weight: 700;
+    }
+
+    /* booking.jsx */
+
+    .book-detail{
+      height: 500px !important;
+      width: 95% !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    .bookimg{
+      height: 150px !important;
+      width: 250px !important;
+    }
+    .font-booking{
+      font-size: 40px !important;
+    }
+    .loc_detail{
+      height: 330px !important;
+      width: 95% !important;
+      display: flex !important;
+      justify-content: space-evenly !important;
+    }
+
+    /* train.jsx */
+
+    
+/* luggage.jsx */
+
+.inp-lag{
+  height: 250px !important;
+  width: 325px !important;
+  padding-left: 110px !important;
+  font-size: 90px !important;
+}
+.range-lag{
+  width: 325px !important;
+}
+
+
+
+  }
+
+
+
+  @media (max-width:576px){
+    /* Navbar.jsx */
+  
+    .nav-ul-info{
+      height: 50px;
+      width: 60% !important;
+      padding: 0%;
+    }
+    nav{
+      height:70px;
+      width: 100% !important;
+    } 
+    .nav-sign{
+      height: 50px;
+      padding: 0%;
+      width: 80% !important;
+    }
+
+    /* dashboard.jsx */
+    .para-data{
+      font-size: 1rem !important;
+      /* padding: 1rem  !important; */
+      text-align: justify !important;
+    }
+    .bookingstep{
+      height: 450px !important;
+      width: 90% !important;
+    }
+    .ol-dash{
+      height: 275px !important;
+      width: 70% !important;
+    }
+
+    .font3{
+      font-size: 30px !important;
+      font-weight: 700;
+    }
+
+    /* booking.jsx */
+
+    .bookimg{
+      height: 100px !important;
+      width: 200px !important;
+    }
+    .font-booking{
+      font-size: 35px !important;
+    }
+
+    /* train.jsx */
+    .log{
+      width: 90% !important;
+    }
+
+    /* luggage.jsx */
+
+.inp-lag{
+  height: 250px !important;
+  width: 325px !important;
+  padding-left: 110px !important;
+  font-size: 90px !important;
+}
+.range-lag{
+  width: 325px !important;
+}
+
+
+    
+  
+  }
+
+  @media (max-width:480px){
+    /* Navbar.jsx */
+    .logo{
+      height: 100px !important;
+      width: 100px !important;
+    }
+
+    .nav-logo{
+      height: 40px !important;
+      width: 40px !important;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .logo-img{
+      height: 100px !important;
+      width: 100px !important;
+      object-fit: contain;
+    }
+    .nav-ul-info{
+      height: 50px;
+      width: 85% !important;
+      padding: 0%;
+      text-align: center;
+    }
+    nav{
+      height:70px;
+      width: 125% !important;
+    } 
+    .nav-sign{
+      height: 50px;
+      width: 95% !important;
+    }
+
+    /* dashboard.jsx */
+    .para-data{
+      font-size: 1rem !important;
+      /* padding: 1rem  !important; */
+      text-align: justify !important;
+    }
+    .bookingstep{
+      height: 500px !important;
+      width: 90% !important;
+    }
+    .ol-dash{
+      height: 275px !important;
+      width: 70% !important;
+    }
+
+    .font3{
+      font-size: 25px !important;
+      font-weight: 700;
+    }
+    
+    .log-btn{
+      height: 35px !important;
+      width: 70% !important;
+    }
+
+    .log{
+      background-color: #ff9999;
+      height: 90vh !important;
+      width: 100% !important;
+    }
+
+    .dash{
+      width: 125% !important;
+    }
+
+    /* booking.jsx */
+
+    .bookimg{
+      height: 115px !important;
+      width: 180px !important;
+    }
+    .log-booking{
+      width: 125% !important;
+    }
+    .font-booking{
+      font-size: 25px !important;
+    }
+
+    /* train.jsx */
+    .log{
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center;
+      width: 125% !important;
+    }
+    .logDetail{
+      height: 400px !important;
+      width: 400px !important;
+    }
+    .inp-log{
+      height: 50px !important;
+      width: 300px !important;
+    }
+  }
+
+  /* luggage.jsx */
+  .font-lug{
+    font-size: 1.5rem !important;
+  }
+  .inp-lag{
+    height: 225px !important;
+    width: 290px !important;
+    padding-left: 110px !important;
+    font-size: 90px !important;
+  }
+  .range-lag{
+    width: 290px !important;
   }
   
-  .logDetail{
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 500px;
-    width: 500px;
+
+
+  @media (max-width:320px){
+    /* Navbar.jsx */
+    .logo{
+      height: 100px !important;
+      width: 100px !important;
+    }
+
+    .nav-logo{
+      height: 40px !important;
+      width: 40px !important;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .logo-img{
+      height: 100px !important;
+      width: 100px !important;
+      object-fit: contain;
+    }
+    .nav-ul-info{
+      height: 50px;
+      width: 85% !important;
+      text-align: center;
+    }
+    nav{
+      height:70px;
+      width: 125% !important;
+    } 
+    .nav-sign{
+      height: 50px;
+      width: 80% !important;
+    }
+
+    /* dashboard.jsx */
+    .para-data{
+      font-size: 1rem !important;
+      text-align: justify !important;
+    }
+    .bookingstep{
+      height: 550px !important;
+      width: 90% !important;
+    }
+    .ol-dash{
+      height: 350px !important;
+      width: 70% !important;
+    }
+
+    .font3{
+      font-size: 25px !important;
+      font-weight: 700;
+    }
+    
+    .log-btn{
+      height: 35px !important;
+      width: 70% !important;
+    }
+
+    .log{
+      background-color: #ff9999;
+      height: 100vh !important;
+      width: 100% !important;
+    }
+
+    .dash{
+      width: 125% !important;
+    }
+    
+    /* booking.jsx */
+
+    .p-booking{
+      font-size: 20px !important;
+    }
+    .bookimg{
+      height: 80px !important;
+      width: 150px !important;
+    }
+    .font-booking{
+      font-size: 30px !important;
+    }
+    .log-booking{
+      width: 125% !important;
+    }
+
+    /* train.jsx */
+    .log{
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center;
+      width: 125% !important;
+    }
+    .logDetail{
+      height: 350px !important;
+      width: 350px !important;
+    }
+    .inp-log{
+      height: 45px !important;
+      width: 300px !important;
+    }
+
+    
+  /* luggage.jsx */
+  .font-lug{
+    font-size: 1rem !important;
   }
-  
-  .login-logo{
-    height: 100px;
-    width: 100px;
-  }
-  
-  .inp-log{
-    height: 50px;
-    width: 400px;
-    background-color: #D9D9D9;
-    border: 2px solid #D9D9D9;
-    border-radius: 10px;
-  }
-  
-  .view-pass{
-    display: flex;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-  }
-  
-  .inp-pass{
-    width: 350px;
-  }
-  
-  .view{
-    background-color: #D9D9D9;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
-  
-  .log-btn{
-    height: 50px;
-    width: 400px;
-    color: white;
-    background-color: #FF3131;
-    border-radius: 15px;
-    border: 2px solid #FF3131;
-    cursor: pointer;
-  }
-  
-  
-  
-  
+
   }
