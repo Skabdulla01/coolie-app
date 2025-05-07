@@ -54,9 +54,10 @@ function login() {
         </div>
         {/* {errors.password && <p className='errormsg'>{errors.password.message}</p>} */}
         <button className="log-btn">Log in</button>
-        <Link className='userlink' to="/signup">Sign up for Connect coolie</Link>
-        <p className='userlink'>--or--</p>
-        <Link className='userlink' to="/forgot">Forgotten password</Link>
+        <div className="login-userlink">
+          <Link className='userlink' to="/forgot">Forgotten password</Link>
+          <Link className='userlink' to="/signup">Sign up for Connect coolie</Link> 
+        </div>
       </form>
     </div>
     </>

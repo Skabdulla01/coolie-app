@@ -7,7 +7,7 @@ function dashboard() {
     const [data,setdata] = useState([]);
     const [inp,setinp] = useState([]);
     const navigate = useNavigate();
-    const {id,name}=useParams();
+    const {id}=useParams();
 
 
     useEffect(()=>{
@@ -36,13 +36,12 @@ function dashboard() {
 
     const found = inp.find(item=> item.id === parseInt(id))
     
-    const userid=found?found.id:""
 
 
 
   return (
     <>
-    <Navbar dash={`/dashboard/${userid}`} userid={userid}/>
+    <Navbar dash={`/dashboard/${id}`} userid={id}/>
     <div className="dash">
         <div className="username">
             <h3 className='font3'>Hello {found?found.firstname:""},</h3>

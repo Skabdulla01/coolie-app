@@ -56,9 +56,10 @@ function plogin() {
         </div>
         {/* {errors.password && <p className='errormsg'>{errors.password.message}</p>} */}
         <button className='log-btn'>Log in</button>
-        <Link className='userlink' to="/psignup">Sign up for Connect</Link>
-        <p className='userlink'>--or--</p>
-        <Link className='userlink' to="/pforgot">Forgotten password</Link>
+        <div className="login-userlink">
+          <Link className='userlink' to="/pforgot">Forgotten password</Link>
+          <Link className='userlink' to="/psignup">Sign up for Connect</Link>
+        </div>
       </form>
     </div>
     </>

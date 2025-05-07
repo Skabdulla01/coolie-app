@@ -22,7 +22,7 @@ function history() {
 
   return (
     <>
-    <Navbar dash={lnk}/>
+    <Navbar dash={lnk} userid={id}/>
     <div className="log">
         <table className='history-tabel'>
             <thead className='tabel-data'>

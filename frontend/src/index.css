@@ -176,7 +176,11 @@ input{
 
 
 /* login.jsx */
-
+.login-userlink{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
 .log{
   background-color: #ff9999;
   height: 90vh;
