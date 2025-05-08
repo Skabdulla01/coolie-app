@@ -95,6 +95,11 @@ function Confirm() {
           <td><p className='p-data'><b>{found ? found.station : "not found"}</b></p></td>
         </tr>
         <tr>
+          <td><p className='p-data'><strong>PNR number</strong></p></td>
+          <td className='space pdata'><p><b>:</b></p></td>
+          <td><p className='p-data'><b>{found ? found.pnr : "not found"}</b></p></td>
+        </tr>
+        <tr>
           <td><p className='p-data'><strong>Train detail</strong></p></td>
           <td className='space p-data'><p><b>:</b></p></td>
           <td><p className='p-data'><b>{found ? `${found.trainno}/${found.coach} ${found.seat}` : "not found"}</b></p></td>

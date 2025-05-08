@@ -42,7 +42,7 @@ function history() {
                     .filter(item => item.id.toString().includes(id))
                     .map((item, index) => (
                         <tr key={item.uid}>
-                            <td className='tabel-data'>{item.pfirstname}</td>
+                            <td className='tabel-data'>{item.pfirstname} {item.plastname}</td>
                             <td className='tabel-data'>{item.pnr}</td>
                             <td className='tabel-data'>{item.loc}</td>
                             <td className='tabel-data'>{item.station}</td>

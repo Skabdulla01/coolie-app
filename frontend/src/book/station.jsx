@@ -26,19 +26,19 @@ function station({ sendDataToParent, id, uid }) {
       <input hidden type="text" value={'station'} readOnly {...register('loc')}/>
 
       <input className='inp-log' type="text" placeholder='PNR Number'{...register('pnr',{required: {value:true, message:"Please enter pnr"}})}/>
-      {errors.pnr && <p className='errormsg'>{errors.pnr.message}</p>}
+      {/* {errors.pnr && <p className='errormsg'>{errors.pnr.message}</p>} */}
 
       <input className='inp-log' type="text" placeholder='Enter Station Name'{...register('station',{required: {value:true, message:"Please enter station"}})}/>
-      {errors.station && <p className='errormsg'>{errors.station.message}</p>}
+      {/* {errors.station && <p className='errormsg'>{errors.station.message}</p>} */}
       
       <input className='inp-log' type="text" placeholder='Enter Train Number' {...register('trainno',{required: {value:true, message:"Please enter train number"}})}/> 
-      {errors.trainno && <p className='errormsg'>{errors.trainno.message}</p>}
+      {/* {errors.trainno && <p className='errormsg'>{errors.trainno.message}</p>} */}
       
       <input className='inp-log' type="text" placeholder='Enter Coach Number' {...register('coach',{required: {value:true, message:"Please enter coach number"}})}/>
-      {errors.coach && <p className='errormsg'>{errors.coach.message}</p>}
+      {/* {errors.coach && <p className='errormsg'>{errors.coach.message}</p>} */}
       
       <input className='inp-log' type="text" placeholder='Enter Seat Number' {...register('seat',{required: {value:true, message:"Please enter seat number"}})}/>
-      {errors.coach && <p className='errormsg'>{errors.coach.message}</p>}
+      {/* {errors.coach && <p className='errormsg'>{errors.coach.message}</p>} */}
       
       <input hidden type="number" value={0} readOnly {...register('lag')}/> 
       <button className='log-btn'>Next</button>

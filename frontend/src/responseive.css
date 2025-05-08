@@ -89,6 +89,21 @@
     }
 
     
+    /* book.jsx */
+
+    .bar{
+      width: 60% !important;
+    }
+
+    /* .progress{
+      width: 100% !important;
+    } */
+
+    /* .prog-bar{
+      width: 100% !important;
+
+    } */
+    
 
   }
 
@@ -208,6 +223,13 @@
     .hero-data{
       padding: 70px 0px 0px 60px !important;
     }
+
+    /* book.jsx */
+      
+    .bar{
+      width: 70% !important;
+    }
+    
 
   }
 
@@ -333,6 +355,11 @@
       margin-top: 0px !important;
     }
 
+    /* book.jsx */
+      
+    .bar{
+      width: 80% !important;
+    }
 
     
   
@@ -365,7 +392,7 @@
     }
     nav{
       height:70px;
-      width: 125% !important;
+      width: 152% !important;
     } 
     .nav-sign{
       height: 50px;
@@ -549,6 +576,17 @@
   .log{
     width: 125% !important;
   }
+
+  /* book.jsx */
+
+  .prog-bar{
+    width: 125% !important;
+  }
+      
+  .bar{
+    width: 95% !important;
+  }
+
   }
 
   
@@ -744,6 +782,16 @@
   }
   .log{
     width: 135% !important;
+  }
+
+  /* book.jsx */
+
+  .prog-bar{
+    width: 135% !important;
+  }
+      
+  .bar{
+    width: 110% !important;
   }
 
   }

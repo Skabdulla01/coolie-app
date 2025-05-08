@@ -55,7 +55,7 @@ function book() {
   return (
     <>
     <Navbar dash={lnk}/>
-    {/* <div className="prog-bar">
+    <div className="prog-bar">
       <div className="bar">
         <div className="progress">
             <div className="step" style={{backgroundColor: c,border: b}}><img className='num' src={no1} alt="number1" /></div>
@@ -65,7 +65,7 @@ function book() {
         </div>
         <div className="progress-bar" style={{width: `${a}%`}}></div>
       </div>
-      </div> */}
+      </div>
 
       {comp}
     </>

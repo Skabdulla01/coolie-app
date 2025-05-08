@@ -28,7 +28,18 @@ const no=()=>{
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
       <button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>
-      <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li>
+      {/* <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li> */}
+      <li className="nav-info dropdown">
+      <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
+      <ul className="dropdown-menu">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to={"/login"}>Login as user</Link></li>
+        <li><Link to={"/plogin"}>Login as Connect</Link></li>
+        <li><Link to={"/aboutus"}>About us</Link></li>
+        <li><Link to={"/Contact"}>Contact us</Link></li>
+      </ul>
+    </li>
+      
     </ul>
   )
 }
