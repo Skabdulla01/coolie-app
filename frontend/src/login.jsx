@@ -45,7 +45,7 @@ function login() {
     <div className="log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
         <img className='login-logo' src={logo} alt="logo" />
-        <h2>Login into Connect Coolie (as User)</h2>
+        <h2 className='font2'>Login into Connect Coolie (as User)</h2>
         <input className='inp-log' type="email" placeholder='Enter the Email' {...register("email",{required:{value:true,message:"Email require"}})}/>
         {/* {errors.email && <p className='errormsg'>{errors.email.message}</p>} */}
         <div className="view-pass">

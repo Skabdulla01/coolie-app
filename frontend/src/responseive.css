@@ -36,6 +36,10 @@
     }
 
     /* booking.jsx */
+    
+    .log{
+      width: 100% !important;
+    }
 
     .book-detail{
       height: 500px !important;
@@ -263,10 +267,11 @@
 
     /* train.jsx */
     .log{
-      width: 90% !important;
+      width: 100% !important;
     }
 
     /* luggage.jsx */
+
 
     .inp-lag{
       height: 250px !important;
@@ -509,6 +514,41 @@
     font-size: 15px !important;
   }
 
+  /* login.jsx */
+  .inp-pass{
+    width: 255px !important;
+  }
+  
+  .view{
+    height: 45px !important;
+    width: 45px !important;
+  }
+  .userlink{
+    padding: 10px !important;
+  }
+  .font2{
+    font-size: 1.2rem !important;
+  }
+
+  /* signup.jsx */
+  .inps{
+    width: 148px !important;
+  }
+  
+  .signup-data{
+    width: 300px !important;
+  }
+
+  /* payment.jsx */
+  
+  .tabel-pay{
+    width: 380px !important;
+    height: 280px !important;
+  }
+  
+  .log{
+    width: 125% !important;
+  }
   }
 
   
@@ -668,7 +708,42 @@
   .hero{
     width: 135% !important;
   }
+
+  /* login.jsx */
+  .inp-pass{
+    width: 255px !important;
+  }
   
+  .view{
+    height: 45px !important;
+    width: 45px !important;
+  }
+  .userlink{
+    padding: 10px !important;
+  }
+  .font2{
+    font-size: 1.2rem !important;
+  }
   
+  /* signup.jsx */
+  .inps{
+    width: 148px !important;
+  }
+  
+  .signup-data{
+    width: 300px !important;
+  }
+
+  /* payment.jsx */
+  .p-data{
+    font-size: 1rem !important;
+  }
+  .tabel-pay{
+    width: 330px !important;
+    height: 240px !important;
+  }
+  .log{
+    width: 135% !important;
+  }
 
   }
