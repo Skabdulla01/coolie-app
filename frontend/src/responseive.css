@@ -59,6 +59,31 @@
     
 /* luggage.jsx */
 
+    /* footer.jsx */
+
+    .social{
+      width: 40% !important;
+    }
+
+    .footer-ul{
+      width: 40% !important;
+    }
+
+    /* coolie.jsx */
+    
+    .whoweare-data{
+      height: 25vh !important;
+      width: 60% !important;
+    }
+    .whoweare-img{
+      height: 30vh !important;
+      width: 35% !important;
+    }
+    .container{
+      height: 40vh !important;
+      width: 100%;
+    }
+
     
 
   }
@@ -141,8 +166,44 @@
 .range-lag{
   width: 325px !important;
 }
+    /* footer.jsx */
 
+    .social{
+      width: 50% !important;
+    }
 
+    .footer-ul{
+      width: 50% !important;
+    }
+    
+    /* coolie.jsx */
+    .whoweare-img{
+      height: 50vh !important;
+      width: 35% !important;
+    }
+    .container{
+      height: 50vh !important;
+      width: 100%;
+    }
+    .whoweare-data{
+      width: 60% !important;
+    }
+    .whoweare-img{
+      width: 35% !important;
+      height: 40vh !important;
+    }
+
+    .font1{
+      font-size: 50px !important;
+    }
+
+    .hero-info{
+      width: 475px !important;
+    }
+
+    .hero-data{
+      padding: 70px 0px 0px 60px !important;
+    }
 
   }
 
@@ -151,6 +212,10 @@
   @media (max-width:576px){
     /* Navbar.jsx */
   
+    .nav-info{
+      text-align: center !important;
+      margin-right: 8px !important;
+    }
     .nav-ul-info{
       height: 50px;
       width: 60% !important;
@@ -162,7 +227,7 @@
     } 
     .nav-sign{
       height: 50px;
-      padding: 0%;
+      padding: 0% !important;
       width: 80% !important;
     }
 
@@ -203,15 +268,65 @@
 
     /* luggage.jsx */
 
-.inp-lag{
-  height: 250px !important;
-  width: 325px !important;
-  padding-left: 110px !important;
-  font-size: 90px !important;
-}
-.range-lag{
-  width: 325px !important;
-}
+    .inp-lag{
+      height: 250px !important;
+      width: 325px !important;
+      padding-left: 110px !important;
+      font-size: 90px !important;
+    }
+    .range-lag{
+      width: 325px !important;
+    }
+
+    /* footer.jsx */
+
+    .social{
+      width: 60% !important;
+    }
+
+    .footer-ul{
+      width: 60% !important;
+    }
+    
+
+  
+    
+    /* coolie.jsx */
+    .res-who{
+      height: 70vh !important;
+      display: flex !important;
+      flex-direction: column-reverse !important;
+      align-items: center !important;
+    }
+    
+    .para-data{
+      font-size: 1rem !important;
+    }
+    .whoweare-img{
+      width: 45% !important;
+    }
+    .container{
+      height: 50vh !important;
+      width: 100%;
+    }
+    .whoweare-data{
+      width: 50% !important;
+    }
+    #res-who-img{
+      height: 23vh !important;  
+    }
+
+
+    .hero-info{
+      width: 400px !important;
+    }
+    .hero-data{
+      padding: 90px 0px 0px 50px !important;
+    }
+    
+    .hero-btn{
+      margin-top: 0px !important;
+    }
 
 
     
@@ -315,9 +430,7 @@
       height: 50px !important;
       width: 300px !important;
     }
-  }
-
-  /* luggage.jsx */
+    /* luggage.jsx */
   .font-lug{
     font-size: 1.5rem !important;
   }
@@ -330,6 +443,75 @@
   .range-lag{
     width: 290px !important;
   }
+
+  /* footer.jsx */
+
+  footer{
+    width: 125% !important;
+  }
+
+  .social{
+    width: 70% !important;
+  }
+
+  .footer-ul{
+    width: 70% !important;
+  }
+  
+  /* coolie.jsx */
+
+  .res-who{
+    height: 70vh !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+  }
+  
+  .whoweare-img{
+    width: 45% !important;
+  }
+  .container{
+    height: 50vh !important;
+    width: 100%;
+  }
+  .whoweare-data{
+    width: 50% !important;
+  }
+  #res-who-img{
+    height: 23vh !important; 
+    width: 30% !important; 
+  }
+  .container{
+    width: 125% !important;
+  }
+  .hero{
+    width: 125% !important;
+  }
+  .hero-info{
+    width: 280px !important;
+    height: 150px !important;
+  }
+  .hero-data{
+    padding: 130px 0px 0px 25px !important;
+  }
+  
+  .hero-btn{
+    margin-right: 8px !important;
+    margin-top: 0px !important;
+    height: 50px !important;
+    width: 145px !important;
+  }
+
+  #hero-font1{
+    font-size: 35px !important;
+  }
+  #hero-font3{
+    font-size: 15px !important;
+  }
+
+  }
+
+  
   
 
 
@@ -341,8 +523,8 @@
     }
 
     .nav-logo{
-      height: 40px !important;
-      width: 40px !important;
+      height: 30px !important;
+      width: 30px !important;
       object-fit: contain;
       border-radius: 50%;
     }
@@ -359,7 +541,7 @@
     }
     nav{
       height:70px;
-      width: 125% !important;
+      width: 135% !important;
     } 
     .nav-sign{
       height: 50px;
@@ -437,5 +619,56 @@
   .font-lug{
     font-size: 1rem !important;
   }
+
+  /* footer.jsx */
+
+  footer{
+    width: 135% !important;
+  }
+
+  .social{
+    width: 80% !important;
+  }
+
+  .footer-ul{
+    width: 80% !important;
+  }
+
+
+  /* coolie.jsx */
+
+  .font3{
+    font-size: 22px !important;
+  }
+
+  .res-who{
+    height: 70vh !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+  }
+  .whoweare-img{
+    width: 45% !important;
+  }
+  .container{
+    height: 70vh !important;
+    width: 100%;
+  }
+  .whoweare-data{
+    width: 50% !important;
+  }
+  #res-who-img{
+    height: 20vh !important; 
+    width: 45% !important; 
+  }
+  .container{
+    width: 135% !important;
+  }
+
+  .hero{
+    width: 135% !important;
+  }
+  
+  
 
   }

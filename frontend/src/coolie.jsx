@@ -13,26 +13,28 @@ function coolie() {
 
       <div className="hero  bghero"></div>
       <div className="hero">
-        <div className="hero-info">
-          <h1 className='font1'>Go anywhere with<br/>ConnectCoolie</h1>
-          <h3 className='font3'>Travel Light, Travel Right</h3>
+        <div className="hero-data">
+            <div className="hero-info">
+              <h1 className='font1' id='hero-font1'>Go anywhere with<br/>ConnectCoolie</h1>
+              <h3 className='font3' id='hero-font3'>Travel Light, Travel Right</h3>
+            </div>
+            <button className='hero-btn' onClick={()=>navigate(`/signup`)}>Sign up</button>
+            <button className='hero-btn'onClick={()=>navigate(`/login`)}>Login</button>
         </div>
-        <button className='hero-btn' onClick={()=>navigate(`/signup`)}>Sign up</button>
-        <button className='hero-btn'onClick={()=>navigate(`/login`)}>Login</button>
       </div>
 
 
       <div className="container">
       <h1 className='font3'>Who We Are</h1>
-      <div className="whoWeAre">
-        <div className="whoweare-data">
+      <div className="whoWeAre res-who">
+        <div className="whoweare">
           <p className='para-data'>
           We are a passionate team on a mission to simplify your travel experience by connecting you with reliable, professional coolies at your fingertips. Whether you're at a railway station, bus terminal, or airport, our platform makes it easy to book trained helpers who will carry your luggage safely and assist you from start to finish.
           <br />Rooted in tradition but driven by technology, we aim to modernize the way luggage assistance works—bringing respect, dignity, and opportunity to the hardworking coolie community while offering travelers convenience, comfort, and peace of mind.
           <br />With a few clicks, you can now reserve a coolie in advance, track their location, and focus on your journey—while we handle the heavy lifting.
           </p>
         </div>
-        <img src={coolielogo} alt="logo" className="whoweare-img" />
+        <img src={coolielogo} alt="logo" className="whoweare-img" id='res-who-img' />
         </div>
       </div>
 
@@ -57,15 +59,17 @@ function coolie() {
       <br />
         <div className="whoWeAre">
           <img src={steps} alt="step" className="whoweare-img"/>
-          <ol className='para-data'>
-            <li><p><b>Select Location:</b> <br /> Choose At Station or In Train to specify where you need the connect to meet you.</p></li>
-            <br />
-            <li><p><b>Enter Details:</b><br />Provide your train number, station name, coach number, and seat number for accurate connect dispatch.</p></li>
-            <br />
-            <li><p><b>Luggage Count:</b><br />Indicate the number of luggage pieces you have (maximum 10) for the connect to handle.</p></li>
-            <br />
-            <li><p><b>Confirm & Search:</b> <br />Confirm details, select cash payment, and click to search for available connect.</p></li>
-          </ol>
+          <div className="whoweare-data">
+            <ol className='para-data'>
+              <li><p><b>Select Location:</b> <br /> Choose At Station or In Train to specify where you need the connect to meet you.</p></li>
+              <br />
+              <li><p><b>Enter Details:</b><br />Provide your train number, station name, coach number, and seat number for accurate connect dispatch.</p></li>
+              <br />
+              <li><p><b>Luggage Count:</b><br />Indicate the number of luggage pieces you have (maximum 10) for the connect to handle.</p></li>
+              <br />
+              <li><p><b>Confirm & Search:</b> <br />Confirm details, select cash payment, and click to search for available connect.</p></li>
+            </ol>
+          </div>
         </div>
       </div>
     <Footer />

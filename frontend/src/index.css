@@ -96,10 +96,10 @@ input{
   justify-content: space-evenly;
 }
 
+
 .para-data{
   font-size: 1.5rem;
   padding: 1rem;
-  text-align: justify;
 }
 
 .whoweare-data{
@@ -121,9 +121,7 @@ input{
   background-color: #FF3131;
   border-radius: 53px;
   border: 2px solid #FF3131;
-  position: relative;
-  left: 90px;
-  top: 100px;
+  margin-top: 30px;
   margin-right: 43px;
   cursor: pointer;
   
@@ -152,10 +150,12 @@ input{
 .hero-info{
   height: 200px;
   width: 615px;
-  position: relative;
-  left: 90px;
-  top: 70px;
 }
+
+.hero-data{
+  padding: 70px 0px 0px 90px;
+}
+
 .font1{
   font-size: 60px;
   font-weight: 700;
