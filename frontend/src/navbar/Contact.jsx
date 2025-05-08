@@ -5,7 +5,7 @@ import Footer from '../footer'
 function contact() {
   return (
     <>
-    <Navbar dash="/"/>
+    <Navbar dash="/" nav="no"/>
     <div className="log">
       <div className="contactus">
         <div className="contact-src">

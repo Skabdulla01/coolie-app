@@ -21,14 +21,13 @@ const yes = (id)=>{
 }
 
 
-const no=()=>{
+const no=(props)=>{
     const navigate = useNavigate();
   return(
     <ul className='nav-sign'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
       <button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>
-      {/* <li className='nav-info'><Link to='/'><img className='nav-logo' src={unnamed} alt="navlogo" /></Link></li> */}
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
       <ul className="dropdown-menu">

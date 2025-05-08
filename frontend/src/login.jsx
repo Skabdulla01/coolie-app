@@ -41,7 +41,7 @@ function login() {
 
   return (
     <>
-    <Navbar dash="/"/>
+    <Navbar dash="/" nav="no"/>
     <div className="log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
         <img className='login-logo' src={logo} alt="logo" />

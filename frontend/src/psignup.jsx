@@ -53,7 +53,7 @@ function psignup() {
 
   return (
     <>
-    <Navbar dash="/"/>
+    <Navbar dash="/" nav="no"/>
     <div className="log">
       <form className="logsdetail logDetail" onSubmit={handleSubmit(onSubmit)}>
         <img className='login-logo' src={logo} alt="logo" />

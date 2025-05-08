@@ -23,7 +23,7 @@ function pforgot() {
     }
   return (
     <>
-    <Navbar dash="/" />
+    <Navbar dash="/" nav="no" />
     <div className="log-booking log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
       <h2>Reset the Password (as connect)</h2>
