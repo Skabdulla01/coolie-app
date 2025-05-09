@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './navbar'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
@@ -6,16 +6,32 @@ import axios from 'axios'
 
 function pforgot() {
   const navigate = useNavigate()
+    const [inp,setinp]=useState([]);
+
+    useEffect(()=>{
+      axios.get("/api/plogin")
+      .then((res)=> {
+        setinp(res.data)
+      })
+      .catch((err)=>{console.log(err)})
+    })
     const {
             register,
             handleSubmit,
             formState: { errors },
           } = useForm()
+
+
     const onSubmit = async (data)=>{
+      const found = inp.find(item=> item.pnumber.toString() === data.pnumber)
         try {
-            await axios.put("/api/pupdatepassword",data)
-            alert("Password is successfully changed")
-            navigate(`/plogin`)
+          if (found) {
+              await axios.put("/api/pupdatepassword",data)
+              alert("Password is successfully changed")
+              navigate(`/plogin`)
+          } else {
+          alert("Please enter correct Phone number")
+          }
             
         } catch (error) {
             console.log(error)

@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './navbar'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 function forgot() {
+  const [inp,setinp]=useState([]);
   const navigate = useNavigate()
     const {
             register,
             handleSubmit,
             formState: { errors },
           } = useForm()
+
+    useEffect(()=>{
+      axios.get("/api/login")
+      .then((res)=> {
+        setinp(res.data)
+      })
+      .catch((err)=>{console.log(err)})
+    })
+
+
+
     const onSubmit = async (data)=>{
-        try {
-            await axios.put("/api/updatepassword",data)
-            alert("Password is successfully changed")
-            navigate(`/login`)
-            
-        } catch (error) {
-            console.log(error)
+      const found = inp.find(item=> item.phonenumber.toString() === data.phonenumber)
+      try {
+        if (found) {
+          await axios.put("/api/updatepassword",data)
+          alert("Password is successfully changed")
+          navigate(`/login`)
         }
+        else{
+          alert("Please enter correct Phone number")
+        }
+      } catch (error) {
+        console.log(error)
+      }
+
     }
   return (
     <>
