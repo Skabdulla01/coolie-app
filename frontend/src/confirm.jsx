@@ -201,7 +201,7 @@ function Confirm() {
   const lnk=`/dashboard/${id}`
   return (
     <>
-    <Navbar dash={lnk}/>
+    <Navbar dash={lnk} nav="yes"/>
     <div className='log'>
       {loadingState ? loading() : tryagain ? again() : check()}
     </div>

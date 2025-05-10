@@ -3,9 +3,9 @@ import axios from 'axios';
 import Navbar from '../navbar'
 import { useParams } from 'react-router-dom';
 
-function history() {
+function phistory() {
     const [inp,setinp]=useState([]);
-    const { id } = useParams();
+    const { pid } = useParams();
 
     useEffect(()=>{
         axios.get("/api/userdetail")
@@ -18,18 +18,18 @@ function history() {
       })
 
       
-      const lnk=`/dashboard/${id}`
+      const lnk=`/porter/${pid}`
 
   return (
     <>
-    <Navbar dash={lnk} nav="yes" userid={id}/>
-
+    {/* <Navbar dash={lnk} userpid={pid}/> */}
+    <Navbar dash={lnk} nav="no" userpid={pid}/>
 
     <div className="log">
         <table className='history-tabel'>
             <thead className='tabel-data'>
                 <tr>
-                    <th className='tabel-data'>Connect name</th>
+                    <th className='tabel-data'>User name</th>
                     <th className='tabel-data'>PNR number</th>
                     <th className='tabel-data'>Location</th>
                     <th className='tabel-data'>Station</th>
@@ -41,10 +41,10 @@ function history() {
             </thead>
             <tbody>
                 {inp
-                    .filter(item => item.id.toString().includes(id))
+                    .filter(item => item.pid.toString().includes(pid))
                     .map((item, index) => (
                         <tr key={item.uid}>
-                            <td className='tabel-data'>{item.pfirstname} {item.plastname}</td>
+                            <td className='tabel-data'>{item.firstname} {item.lastname}</td>
                             <td className='tabel-data'>{item.pnr}</td>
                             <td className='tabel-data'>{item.loc}</td>
                             <td className='tabel-data'>{item.station}</td>
@@ -57,8 +57,9 @@ function history() {
             </tbody>
         </table>
     </div>
+
     </>
   )
 }
 
-export default history
+export default phistory

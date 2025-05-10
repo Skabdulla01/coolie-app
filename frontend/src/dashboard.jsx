@@ -41,7 +41,7 @@ function dashboard() {
 
   return (
     <>
-    <Navbar dash={`/dashboard/${id}`} userid={id}/>
+    <Navbar dash={`/dashboard/${id}`} userid={id} nav="yes"/>
     <div className="dash">
         <div className="username">
             <h3 className='font3'>Hello {found?found.firstname:""},</h3>

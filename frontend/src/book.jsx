@@ -54,7 +54,7 @@ function book() {
 
   return (
     <>
-    <Navbar dash={lnk}/>
+    <Navbar dash={lnk} nav="yes"/>
     <div className="prog-bar">
       <div className="bar">
         <div className="progress">

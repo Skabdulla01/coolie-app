@@ -15,6 +15,8 @@ import History from './menu/history';
 import Profile from './menu/profile'
 import Forgot from './forgot';
 import Pforgot from './pforgot';
+import Pprofile from './menu/pprofile'
+import Phistory from './menu/phistory'
 
 
 function App() {
@@ -40,6 +42,9 @@ function App() {
         {/* menu */}
         <Route path='/profile/:id' element={<Profile/>}/>
         <Route path='/history/:id' element={<History/>}/>
+
+        <Route path='/pprofile/:pid' element={<Pprofile/>}/>
+        <Route path='/phistory/:pid' element={<Phistory/>}/>
 
         <Route path='/forgot' element={<Forgot/>}/>
         <Route path='/pforgot' element={<Pforgot/>}/>

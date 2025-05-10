@@ -44,7 +44,7 @@ function porterconfirm() {
   const lnk = `/porter/${pid}`
   return (
     <>
-    <Navbar dash={lnk}/>
+    <Navbar dash={lnk} nav="no" userpid={pid}/>
     <div className="log">
       <div className='logDetail'>
       <h1>User Detail</h1>

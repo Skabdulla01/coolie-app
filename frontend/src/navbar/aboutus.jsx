@@ -8,7 +8,7 @@ import connect from '../image/connect.jpeg'
 function aboutus() {
   return (
     <>
-    <Navbar dash="/" nav="no"/>
+    <Navbar dash="/" />
     <div className="aboutus">
 
       <div className="container">

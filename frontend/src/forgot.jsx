@@ -41,7 +41,7 @@ function forgot() {
     }
   return (
     <>
-    <Navbar dash="/" nav="no"/>
+    <Navbar dash="/"/>
     <div className="log-booking log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
       <h2>Reset the Password (as user)</h2>

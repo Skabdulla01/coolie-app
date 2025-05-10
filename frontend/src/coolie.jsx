@@ -9,7 +9,7 @@ function coolie() {
     const navigate = useNavigate();
   return (
     <>
-    <Navbar nav="false" />
+    <Navbar />
 
       <div className="hero  bghero"></div>
       <div className="hero">

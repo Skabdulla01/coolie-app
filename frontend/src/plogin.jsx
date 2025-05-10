@@ -43,7 +43,7 @@ function plogin() {
     }
   return (
     <>
-    <Navbar dash="/" nav="no"/>
+    <Navbar dash="/"/>
     <div className="log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
         <img className='login-logo' src={logo} alt="logo" />

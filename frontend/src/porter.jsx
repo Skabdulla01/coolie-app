@@ -46,7 +46,7 @@ function porter() {
       const lnk = `/porter/${pid}`
   return (
     <>
-    <Navbar dash={lnk}/>
+    <Navbar dash={lnk} nav="no" userpid={pid}/>
     <div className="dash">
       <div className="username">
               <h3 className='font3'>Hello {found?found.pfirstname:""},</h3>

@@ -20,8 +20,25 @@ const yes = (id)=>{
   )
 }
 
+const pyes = (pid)=>{
+  return(
+    <ul className='nav-ul-info'>
+      <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
+      <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
+      <li className="nav-info dropdown">
+      <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
+      <ul className="dropdown-menu">
+        <li><Link to={`/pprofile/${pid}`}>Profile</Link></li>
+        <li><Link to={`/phistory/${pid}`}>History</Link></li>
+        <li><Link to="/">Logout</Link></li>
+      </ul>
+    </li>
+    </ul>
+  )
+}
 
-const no=(props)=>{
+
+const no=()=>{
     const navigate = useNavigate();
   return(
     <ul className='nav-sign'>
@@ -49,7 +66,7 @@ function navbar(props) {
         <div className="logo">
             <Link to= {props.dash}><img className='logo-img' src={logo} alt="logo" /></Link>
         </div>
-        {Boolean(props.nav)?no():yes(props.userid)}
+        {Boolean(props.nav)?props.nav==="yes" ?yes(props.userid):pyes(props.userpid):no()}
     </nav>
     </>
   )

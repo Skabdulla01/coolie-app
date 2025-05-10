@@ -23,7 +23,7 @@ function profile() {
   const lnk=`/dashboard/${id}`
   return (
     <>
-    <Navbar dash={lnk} userid={id}/>
+    <Navbar dash={lnk} nav="yes" userid={id}/>
     <div className="log">
       <div className='logDetail'>
       <img className='logo-img' src={logo} alt="logo" />
