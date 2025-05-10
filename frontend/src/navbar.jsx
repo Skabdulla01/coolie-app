@@ -38,13 +38,13 @@ const pyes = (pid)=>{
 }
 
 
-const no=()=>{
+const no=(btn)=>{
     const navigate = useNavigate();
   return(
     <ul className='nav-sign'>
       <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
       <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
-      <button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>
+      {Boolean(btn)?<button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>:""}
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
       <ul className="dropdown-menu">
@@ -66,7 +66,7 @@ function navbar(props) {
         <div className="logo">
             <Link to= {props.dash}><img className='logo-img' src={logo} alt="logo" /></Link>
         </div>
-        {Boolean(props.nav)?props.nav==="yes" ?yes(props.userid):pyes(props.userpid):no()}
+        {Boolean(props.nav)?props.nav==="yes" ?yes(props.userid):pyes(props.userpid):no(props.btn)}
     </nav>
     </>
   )

@@ -22,7 +22,6 @@ function phistory() {
 
   return (
     <>
-    {/* <Navbar dash={lnk} userpid={pid}/> */}
     <Navbar dash={lnk} nav="no" userpid={pid}/>
 
     <div className="log">
