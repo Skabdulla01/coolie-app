@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Booking from './booking'
-import Train from './book/train';
 import Station from './book/station';
 import Luggage from './book/luggage';
 import Payment from './book/payment';
@@ -30,11 +29,11 @@ function book() {
   const b="4px solid black"
 
   const handleDataFromChild = (data) => {
-    if (data === "train" || data === "station") {
+    if (data === "Station" || data === "Train") {
         seta(32); 
         setstep1(c); 
         setbord1(b); 
-        setcomp(data === "train" ? <Train id={id} uid={uid} sendDataToParent={handleDataFromChild} /> : <Station id={id} uid={uid} sendDataToParent={handleDataFromChild}/>);
+        setcomp(<Station id={id} uid={uid} sendDataToParent={handleDataFromChild}/>);
       } else if(data==="lug"){
         seta(64); 
         setstep2(c); 
@@ -44,8 +43,13 @@ function book() {
         seta(96); 
         setstep3(c); 
         setbord3(b); 
-        setcomp(<Payment/>);
-    }
+        setcomp(<Payment sendDataToParent={handleDataFromChild}/>);
+    } else if(data==="booking"){
+        seta(0); 
+        setstep1(c); 
+        setbord1(b); 
+        setcomp(<Booking sendDataToParent={handleDataFromChild}/>);
+    } 
   };
 
   const [comp,setcomp] = useState(<Booking sendDataToParent={handleDataFromChild}/>);

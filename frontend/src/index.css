@@ -6,6 +6,28 @@
   /* overflow: hidden; */
 }
 
+/* backword button */
+.backword{
+  height: 4rem;
+  width: 4rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.4rem solid #ff9999;
+  position: absolute;
+  cursor: pointer;
+  top: 4.9rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ibackword{
+  height: 4rem;
+  width: 4rem;
+  color: #ff9999;
+  border-radius: 50%;
+  font-size: 3.5rem;
+}
 
 /* menu */
 

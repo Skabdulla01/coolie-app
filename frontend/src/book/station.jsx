@@ -2,7 +2,7 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
 
-function station({ sendDataToParent, id, uid }) {
+function station({ sendDataToParent, uid }) {
 
   const {
           register,
@@ -12,18 +12,23 @@ function station({ sendDataToParent, id, uid }) {
 
   const onSubmit = async (data)=>{
     try {
-      const newdata = { ...data, id,uid };
-        await axios.post("/api/data",newdata)
+      const newdata = { ...data, uid };
+        await axios.put("/api/userdata",newdata)
         sendDataToParent("lug");
     } catch (error) {
         console.log(error)
     }
 }
+const back=()=>{
+        sendDataToParent("booking");
+  }
   return (
     <>
+    <button className='backword' onClick={back}><i id='ibackword' className="fa fa-angle-left"></i></button>
+
     <div className="log-booking log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}>
-      <input hidden type="text" value={'station'} readOnly {...register('loc')}/>
+      {/* <input hidden type="text" value={'station'} readOnly {...register('loc')}/> */}
 
       <input className='inp-log' type="text" placeholder='PNR Number'{...register('pnr',{required: {value:true, message:"Please enter pnr"}})}/>
       {/* {errors.pnr && <p className='errormsg'>{errors.pnr.message}</p>} */}
@@ -40,7 +45,6 @@ function station({ sendDataToParent, id, uid }) {
       <input className='inp-log' type="text" placeholder='Enter Seat Number' {...register('seat',{required: {value:true, message:"Please enter seat number"}})}/>
       {/* {errors.coach && <p className='errormsg'>{errors.coach.message}</p>} */}
       
-      <input hidden type="number" value={0} readOnly {...register('lag')}/> 
       <button className='log-btn'>Next</button>
       </form>
     </div>

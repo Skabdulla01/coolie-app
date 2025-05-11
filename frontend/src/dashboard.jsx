@@ -30,8 +30,16 @@ function dashboard() {
           })
         })
 
-    const book =()=>{
-        navigate(`/book/${id}/${data.length+100}`)
+    const book =async ()=>{
+      const uid = data.length+100
+      try {
+        const newdata = { id ,uid};
+        await axios.post("/api/data",newdata)
+        sendDataToParent(loc);
+        } catch (error) {
+          console.log(error)
+        }
+          navigate(`/book/${id}/${uid}`)
     }
 
     const found = inp.find(item=> item.id === parseInt(id))

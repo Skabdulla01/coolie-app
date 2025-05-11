@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
-function payment() {
+function payment({ sendDataToParent }) {
   const navigate = useNavigate();
     const {id,uid}=useParams();
     const [inp,setinp] = useState([])
@@ -47,12 +47,16 @@ function payment() {
       alert("please select payment option")
     }
   }
+  const back=()=>{
+        sendDataToParent("lug");
+  }
   
     
 
 
   return (
     <>
+    <button className='backword' onClick={back}><i id='ibackword' className="fa fa-angle-left"></i></button>
      <div className="log-booking log">
       <div className='logDetail'>
         <h1>Booking Details</h1>

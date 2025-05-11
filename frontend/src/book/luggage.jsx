@@ -1,9 +1,11 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 
 
-function luggage({ sendDataToParent, id }) {
+function luggage({ sendDataToParent }) {
+    const {uid}=useParams();
 
   const {
     register,
@@ -22,8 +24,13 @@ function luggage({ sendDataToParent, id }) {
         console.log(error)
     }
 }
+const back=()=>{
+        sendDataToParent("Station");
+  }
   return (
     <>
+    <button className='backword' onClick={back}><i id='ibackword' className="fa fa-angle-left"></i></button>
+
     <div className="log-booking log">
       <form className="logDetail" onSubmit={handleSubmit(onSubmit)}> 
 
@@ -32,7 +39,7 @@ function luggage({ sendDataToParent, id }) {
         
         <input className='range-lag' type="range" min={1} max={5} {...register('lag')}/>
 
-        <input hidden type="text" value={id} {...register('id')}/>
+        <input hidden type="text" value={uid} {...register('uid')}/>
         <button className='log-btn'>Next</button>
 
       </form>

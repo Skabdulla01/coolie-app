@@ -36,9 +36,9 @@ app.get("/api/login",(req,res)=>{
 
 
 app.post("/api/data",(req,res)=>{
-    const query = "INSERT INTO detail (id, uid, loc, pnr, station, trainno, coach, seat, lag) VALUES (?,?,?,?,?,?,?,?,?)" 
-    const {id, uid, loc, pnr, station, trainno, coach, seat, lag} = req.body
-    pool.query(query,[id, uid, loc, pnr,station, trainno, coach, seat, lag],(error,result)=>{
+    const query = "INSERT INTO detail (id, uid) VALUES (?,?)" 
+    const {id, uid} = req.body
+    pool.query(query,[id, uid],(error,result)=>{
         if (error) {
             return res.status(500).json({ message: 'Error inserting data', error: error });
           }
@@ -46,10 +46,39 @@ app.post("/api/data",(req,res)=>{
     })
 })
 
+
+app.put("/api/locdata",(req,res)=>{
+    const query = 'UPDATE detail SET loc=? WHERE uid = ?'
+    const {loc,uid}=req.body 
+    pool.query(query,[loc,uid],(error,result)=>{
+        if (error) {
+            return res.status(500).json({ message: 'Error inserting data', error: error });
+          }
+          res.status(200).json({ message: 'Data inserted successfully', data: result });
+    })
+})
+
+
+
+app.put("/api/userdata",(req,res)=>{
+    const query = 'UPDATE detail SET pnr=?,station=?,trainno=?,coach=?,seat=? WHERE uid = ?'
+    const {pnr,station,trainno,coach,seat,uid}=req.body 
+    pool.query(query,[pnr,station,trainno,coach,seat,uid],(error,result)=>{
+        if (error) {
+            return res.status(500).json({ message: 'Error inserting data', error: error });
+          }
+          res.status(200).json({ message: 'Data inserted successfully', data: result });
+    })
+})
+
+
+
+
+
 app.put("/api/lagdata",(req,res)=>{
-    const query = 'UPDATE detail SET lag=? WHERE id = ?'
-    const {lag,id}=req.body 
-    pool.query(query,[lag,id],(error,result)=>{
+    const query = 'UPDATE detail SET lag=? WHERE uid = ?'
+    const {lag,uid}=req.body 
+    pool.query(query,[lag,uid],(error,result)=>{
         if (error) {
             return res.status(500).json({ message: 'Error inserting data', error: error });
           }
