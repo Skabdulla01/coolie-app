@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from './image/CONNECT_LOGO.png'
 import unnamed from './image/unnamed.png'
 import {Link,useNavigate} from 'react-router-dom'
@@ -6,8 +6,8 @@ import {Link,useNavigate} from 'react-router-dom'
 const yes = (id)=>{
   return(
     <ul className='nav-ul-info'>
-      <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
-      <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
+      <li className='nav-info'><Link to={`/aboutus/${"u"+id}`}>About us</Link></li>
+      <li className='nav-info'><Link to={`/Contact/${"u"+id}`}>Contact us</Link></li>
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
       <ul className="dropdown-menu">
@@ -23,8 +23,8 @@ const yes = (id)=>{
 const pyes = (pid)=>{
   return(
     <ul className='nav-ul-info'>
-      <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
-      <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
+      <li className='nav-info'><Link to={`/aboutus/${"p"+pid}`}>About us</Link></li>
+      <li className='nav-info'><Link to={`/Contact/${"p"+pid}`}>Contact us</Link></li>
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
       <ul className="dropdown-menu">
@@ -40,10 +40,11 @@ const pyes = (pid)=>{
 
 const no=(btn)=>{
     const navigate = useNavigate();
+    const num=0
   return(
     <ul className='nav-sign'>
-      <li className='nav-info'><Link to='/aboutus'>About us</Link></li>
-      <li className='nav-info'><Link to='/Contact'>Contact us</Link></li>
+      <li className='nav-info'><Link to={`/aboutus/${num}`}>About us</Link></li>
+      <li className='nav-info'><Link to={`/Contact/${num}`}>Contact us</Link></li>
       {Boolean(btn)?<button className='nav-info por-btn' onClick={()=>navigate(`/plogin`)}>Login as Connect</button>:""}
       <li className="nav-info dropdown">
       <span className="dropdown-toggle"><img className='nav-logo' src={unnamed} alt="navlogo" /></span>
@@ -73,29 +74,3 @@ function navbar(props) {
 }
 
 export default navbar
-
-
-
-
-// import React from 'react'
-// import logo from './image/CONNECT_LOGO.png'
-// import unnamed from './image/unnamed.png'
-
-// function navbar() {
-//   return (
-//     <>
-//     <nav>
-//         <div className="logo">
-//             <a href= ''><img className='logo-img' src={logo} alt="logo" /></a>
-//         </div>
-//         <ul className='nav-ul-info'>
-//             <li className='nav-info'><a href=''>About</a></li>
-//             <li className='nav-info'><a href=''>Help</a></li>
-//             <li className='nav-info'><a href=''><img className='nav-logo' src={unnamed} alt="navlogo" /></a></li>
-//         </ul>
-//     </nav>
-//     </>
-//   )
-// }
-
-// export default navbar

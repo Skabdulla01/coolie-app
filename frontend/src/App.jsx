@@ -37,8 +37,8 @@ function App() {
         <Route path='/porter/:pid' element={<Porter/>}/>
         <Route path='/porterconfirm/:id/:uid/:pid' element={<Porterconfirm/>}/>
         {/* nav */}
-        <Route path='/aboutus' element={<Aboutus/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/aboutus/:data' element={<Aboutus/>}/>
+        <Route path='/Contact/:data' element={<Contact/>}/>
         {/* menu */}
         <Route path='/profile/:id' element={<Profile/>}/>
         <Route path='/history/:id' element={<History/>}/>
