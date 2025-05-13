@@ -12,7 +12,7 @@ function aboutus() {
   
   return (
     <>
-    {data[0]==="u"?<Navbar dash={`/dashboard/${data.slice(1)}` || "/"} nav={"yes"} userid={data.slice(1)}/>:<Navbar dash={`/porter/${data.slice(1)}` || "/"} nav={"no"} userpid={data.slice(1)}/>}
+    {data[0]==="0"?<Navbar dash="/"/>:data[0]==="u"?<Navbar dash={`/dashboard/${data.slice(1)}` || "/"} nav={"yes"} userid={data.slice(1)}/>:<Navbar dash={`/porter/${data.slice(1)}` || "/"} nav={"no"} userpid={data.slice(1)}/>}
     <div className="aboutus">
 
       <div className="container">
