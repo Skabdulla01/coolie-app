@@ -4,24 +4,10 @@ import Navbar from '../navbar'
 import Footer from '../footer'
 
 function contact() {
-  const [navdata,setnavdata]=useState()
-  const [lnk,setlnk] = useState()
   const {data}=useParams();
-
-  useEffect(()=>{
-    if (data[0]==="u"){
-    setlnk(`/dashboard/${data.slice(1)}`)
-    setnavdata("yes")
-    console.log("hello")
-  } else if(data[0]==="p"){
-    setlnk(`/porter/${data.slice(1)}`)
-    setnavdata("no")
-    console.log("bye")
-  }
-  })
   return (
     <>
-    <Navbar dash={lnk || "/"} nav={navdata} userid={data.slice(1)}/>
+    {data[0]==="u"?<Navbar dash={`/dashboard/${data.slice(1)}` || "/"} nav={"yes"} userid={data.slice(1)}/>:<Navbar dash={`/porter/${data.slice(1)}` || "/"} nav={"no"} userpid={data.slice(1)}/>}
     <div className="log">
       <div className="contactus">
         <div className="contact-src">
